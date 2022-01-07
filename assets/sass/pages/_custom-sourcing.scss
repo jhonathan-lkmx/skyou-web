@@ -1,0 +1,26 @@
+#custom-sourcing {
+  &__description {
+    padding-top: var(--column-space-l);
+    padding-bottom: var(--column-space-l);
+    .content {
+      .box {
+        strong {
+          font-weight: bolder;
+        }
+      }
+    }
+  }
+  &__form {
+    padding-top: var(--column-space-l);
+    padding-bottom: 120px;
+    .content {
+      .box {
+        display: grid;
+        justify-content: center;
+        @include respond-to("<=m") {
+          padding: 0;
+        }
+      }
+    }
+  }
+}

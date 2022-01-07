@@ -1,0 +1,57 @@
+:root {
+  //GENERAL
+  --f-default-text-color: var(--color-neutral-01);
+  --f-default-text-font: "Roboto", sans-serif;
+  --f-default-text-size: 16px;
+  --f-paragraph-line-height: 28.8px;
+  --f-text-selection-color: var(--color-primary-fashion-fuchsia);
+  --f-degfault-heading-letter-space: 1%;
+  --f-paragraph-text-weight: 300;
+  --f-default-link-line-height: 18px;
+
+  // HEADINGS GENERAL
+  --f-default-headers-font: "Comfortaa", sans-serif;
+  --f-default-headers-weight: 700;
+
+  // H1
+  --f-h1-text-size: 44px;
+  --f-h1-line-height: 52.8px;
+  --f-h1-text-weight: var(--f-default-headers-weight);
+  --f-h1-letter-space: var(--f-degfault-heading-letter-space);
+  
+  // H2
+  --f-h2-text-size: 34px;
+  --f-h2-text-weight: var(--f-default-headers-weight);
+  --f-h2-line-height: 48.8px;
+  --f-h2-letter-space: var(--f-degfault-heading-letter-space);
+
+  // H3
+  --f-h3-text-size: 24px;
+  --f-h3-text-weight: var(--f-default-headers-weight);
+  --f-h3-line-height: 31.2px;
+  --f-h3-letter-space: var(--f-degfault-heading-letter-space);
+
+  // H4
+  --f-h4-text-size: 16px;
+  --f-h4-text-weight: var(--f-default-headers-weight);
+  --f-h4-line-height: 22.4px;
+  --f-h4-letter-space: var(--f-degfault-heading-letter-space);
+
+  // H5
+  --f-h5-text-size: 14px;
+  --f-h5-text-weight: var(--f-default-headers-weight);
+  --f-h5-line-height: 21px;
+  --f-h5-letter-space: var(--f-degfault-heading-letter-space);
+
+  // H6
+  --f-h6-text-size: 12px;
+  --f-h6-text-weight: var(--f-default-headers-weight);
+  --f-h6-line-height: 18px;
+  --f-h6-letter-space: var(--f-degfault-heading-letter-space);
+
+  // LINKS
+  a {
+    line-height: var(--f-default-link-line-height);
+    font-weight: var(--f-paragraph-text-weight);
+}
+}

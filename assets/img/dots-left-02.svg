@@ -1,0 +1,8 @@
+<svg width="264" height="405" viewBox="0 0 264 405" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.5 214.5L133 222M133 222L178.5 133.5M133 222L259 252M133 222L173 290M133 222L0.5 404M133 222L0.5 0.5" stroke="#A8B2B3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle r="8" transform="matrix(-1 0 0 1 0 214)" fill="#A8B2B3"/>
+<circle r="8" transform="matrix(-1 0 0 1 133 222)" fill="#A8B2B3"/>
+<circle r="8" transform="matrix(-1 0 0 1 256 251)" fill="#A8B2B3"/>
+<circle r="8" transform="matrix(-1 0 0 1 180 132)" fill="#A8B2B3"/>
+<circle r="8" transform="matrix(-1 0 0 1 172 289)" fill="#A8B2B3"/>
+</svg>

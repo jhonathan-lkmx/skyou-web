@@ -1,0 +1,82 @@
+#design-tool {
+  &__hero {
+    padding-top: var(--column-space-l);
+    padding-bottom: var(--column-space-l);
+    background-color: var(--color-secondary-slate-purple);
+    &__info {
+      .content {
+        display: grid;
+        align-content: center;
+        .box {
+          display: grid;
+          gap: var(--f-gutter);
+          h1, h3, p {
+            margin-bottom: 0;
+          }
+          h1 {
+            color: var(--color-neutral-10);
+            @include respond-to("<=m") {
+              font-size: 34px;
+              line-height: 40.8px;
+            }
+          }
+          h3, p {
+            color: var(--color-neutral-07);
+          }
+        }
+      }
+    }
+    &__image-content {
+      .content {
+        .box {
+          img {
+            @include respond-to("<=s") {
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__subtitle {
+    padding-top: var(--column-space-l);
+    .content {
+      .box {
+        h3 {
+          color: var(--color-secondary-slate-purple);
+          @include respond-to("<=s") {
+            font-size: 16px;
+            line-height: 22.4px;
+          }
+        }
+        @include respond-to("<=s") {
+          padding-top: 0;
+        }
+      }
+    }
+  }
+  &__content {
+    padding-bottom: 120px;
+    @include respond-to("<=m") {
+      padding-top: 0;
+      .card {
+        &__content {
+          &--description {
+            height: 87px;
+            @include respond-to("<=l") {
+              height: 112px;
+              @include respond-to("<=s") {
+                height: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+    .content {
+      .box {
+      }
+    }
+  }
+}

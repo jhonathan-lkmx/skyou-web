@@ -1,0 +1,241 @@
+.nuxt-content-container {
+}
+#home {
+  &__slider {
+    .content {
+      .box {
+        padding: 0;
+      }
+    }
+  }
+  &__what-we-offer {
+    // background-image: linear-gradient(rgba(119, 88, 192, 0.9), rgba(119, 88, 192, 0.9)), url(./static/img/why-skyou-bg.jpg);
+    background-image: url(./static/img/homepage-why-skyou.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    // background-position: center;
+    @include respond-to("<=s") {
+      gap: var(--f-gutter);
+    }
+    &__content {
+      padding-top: var(--column-space-xxl);
+      padding-bottom: var(--column-space-xxl);
+      @include respond-to("<=m") {
+        padding-top: 0;
+        padding-bottom: var(--column-space-xl);        
+      }
+      .content {
+        .box {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          padding: 0;
+          @include respond-to("<=m") {
+            grid-template-columns: 1fr 1fr;
+            gap: var(--f-gutter-l);
+            @include respond-to("<=s") {
+              grid-template-columns: 1fr;
+            }
+          }
+        }
+      }
+      h1 {
+        margin-bottom: var(--column-space-l);
+        padding: var(--f-gutter);
+        text-align: center;
+        grid-column: 1 / 4;
+        color: var(--color-neutral-10);
+        @include respond-to("<=m") {
+          grid-column: 1 / 3;
+          margin-bottom: 0;
+          padding-top: var(--column-space-xl);
+          padding-bottom: var(--column-space-xl);
+          font-size: 24px;
+          line-height: 31.2px;
+        }
+        @include respond-to("<=s") {
+          grid-column: 1 / 2;
+        }
+      }
+    }    
+  }
+  &__our-services {
+    &__title {
+      padding-top: var(--column-space-xxl);
+      padding-bottom: var(--column-space-xxl);
+      background-color: var(--color-neutral-10);
+      @include respond-to("<=s") {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      .content {
+        .box {
+          display: grid;
+          gap: 10px;
+          text-align: center;      
+          justify-content: center;  
+          @include respond-to("<=m") {
+            padding-top: var(--column-space-xl);
+          }  
+          h1{
+            color: var(--color-neutral-03);
+            margin-bottom: 0;
+            @include respond-to("<=s") {
+              font-size: 34px;
+              line-height: 40.8px;
+            }
+          }
+          h3{
+            color: var(--color-neutral-04);
+            margin-bottom: 0;
+            justify-self: center;
+            @include respond-to(">=l") {
+              width: 70%;
+            }
+            @include respond-to("<=s") {
+              font-size: 16px;
+              line-height: 22.4px;
+            }
+          }
+        }
+      }
+    }
+    &__cards {
+      padding-bottom: var(--column-space-xxl);
+      background-color: var(--color-neutral-10);
+      @include respond-to("<=m") {
+        padding-top: var(--f-gutter);
+        padding-bottom: var(--column-space-xl);
+      }
+      gap: var(--f-gutter-l);
+      .content {
+        .box {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          padding: 0 var(--f-gutter-l);
+          gap: var(--f-gutter-l);
+          @include respond-to("<=m") {
+            grid-template-columns: 1fr 1fr;
+            padding: 0;
+            @include respond-to("<=s") {
+              grid-template-columns: 1fr
+            }
+          }
+        }
+      }
+    }
+  }
+  &__our-milestones {
+    &__title {
+      padding-top: var(--column-space-xxl);
+      padding-bottom: var(--column-space-xxl);
+      background: var(--color-neutral-10);
+      @include respond-to("<=s") {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      .content {
+        .box {
+          display: grid;
+          gap: var(--f-gutter);
+          text-align: center;      
+          justify-content: center;    
+          @include respond-to("<=m") {
+            padding-top: var(--column-space-xl);
+          }
+          h1{
+            color: var(--color-primary-fashion-fuchsia);
+            margin-bottom: 0;
+            @include respond-to("<=s") {
+              font-size: 34px;
+              line-height: 40.8px;
+            }
+          }
+          h3{
+            color: var(--color-neutral-04);
+            margin-bottom: 0;
+            justify-self: center;
+            @include respond-to("<=s") {
+              font-size: 16px;
+              line-height: 22.4px;
+            }
+          }
+        }
+      }
+    }
+    &__time-line {
+      padding-bottom: var(--column-space-xxl);
+      background: var(--color-neutral-10);
+      @include respond-to("<=m") {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      .content {
+        .box {
+        }
+      }
+    }
+  }
+  &__our-technology {
+    &__title {
+      padding-bottom: var(--column-space-xxl);
+      background-color: var(--color-neutral-10);
+      @include respond-to("<=m") {
+        padding-bottom: var(--column-space-xl);
+      }
+      .content {
+        .box {
+          text-align: center;
+          @include respond-to("<=s") {
+            padding-top: 0;
+            padding-bottom: 0;
+          }
+          h1 {
+            color: var(--color-neutral-03);
+            @include respond-to("<=s") {
+              font-size: 34px;
+              line-height: 40.8px;
+            }
+          }
+        }
+      }
+    }
+    &__cards {
+      padding-bottom: 120px;
+      background-color: var(--color-neutral-10);
+      gap: var(--f-gutter-l);
+      .content {
+        .box {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          padding: 0 var(--f-gutter-l);
+          gap: var(--f-gutter-l);
+          @include respond-to("<=m") {
+            grid-template-columns: 1fr 1fr;
+            padding: 0;
+            @include respond-to("<=s") {
+              grid-template-columns: 1fr
+            }
+          }
+          .home {
+            &__our-services {
+              &__cards {
+                &__grid-content {
+                    p:nth-of-type(2) {
+                      @include respond-to("<=l") {
+                        height: 112px;
+                        @include respond-to("<=m") {
+                          height: auto;
+                        }
+                      }
+                    }
+                }
+              }
+            }
+          }          
+        }
+      }
+    }    
+  }
+}
