@@ -62,22 +62,9 @@ export default {
           sigleMenu: "is-single-menu",          
         },
         {
-          title: "Products",
-          to: "",
-          dropDownList: [
-            {
-              title: "Apparel",
-              to: "/products",
-            },
-            {
-              title: "Bags",
-              to: "/category",
-            },
-            {
-              title: "Footwear",
-              to: "/category",
-            },            
-          ],
+          title: "Categories",
+          to: "/category",
+          sigleMenu: "categories"
         },
         {
           title: "About Us",

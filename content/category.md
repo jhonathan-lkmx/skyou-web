@@ -5,15 +5,9 @@ description:
 
 <columns mode="normal" number="1" number-m="1" number-s="1" id="category__title">
 
-<block id="category__title__breadcrumb">
-
-<flui-breadcrumb  message="category" :data-breadcrumb='[{"title":"Products","url":"/products"},{"title":"Hoodies and Sweatshirts","url":"/category"}]'/>
-
-</block>
-
 <block>
 
-# Hoodies and Sweatshirts
+# Categories
 
 </block>
 

@@ -27,15 +27,6 @@
                 alt="skyou logo"
                 class="simple-footer__content__skyou--logo"
               />
-              <div class="simple-footer__content__social-media">
-                <a
-                  href="https://www.youtube.com/user/SKyouvideos"
-                  target="_blank"
-                  ><img
-                    src="../assets/img/icon-social-youtube.svg"
-                    alt="youtube"
-                /></a>
-              </div>
             </div>
             <div class="simple-footer__content__contact">
               <div class="simple-footer__content__contact__mail">
@@ -86,10 +77,7 @@
             <h4>Our Services</h4>
             <div class="simple-footer__content__our-services__links-container">
               <nuxt-link to="/shopify-app">Shopify App</nuxt-link>
-              <nuxt-link to="/full-package-for-brands"
-                >Full Package for Brands</nuxt-link
-              >
-              <nuxt-link to="/asi-ppai">ASI/PPAI</nuxt-link>
+              <nuxt-link to="/full-package-for-brands">Full Package for Brands</nuxt-link>
             </div>
           </div>
         </section>
