@@ -113,11 +113,7 @@ export default {
             {
               title: "Full Package for Brands",
               to: "/full-package-for-brands",
-            },
-            {
-              title: "ASI/PPAI",
-              to: "/asi-ppai",
-            },
+            }
           ],
         },
         {
