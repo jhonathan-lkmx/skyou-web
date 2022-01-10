@@ -1,13 +1,5 @@
 <template>
   <div class="home__milestones__grid-content">
-    <div class="home__milestones__grid side-1">
-      <h4>1989</h4>
-      <h4>Founded timbuk2</h4>
-    </div>
-    <div class="home__milestones__grid side-2">
-      <h4>1995</h4>
-      <h4>Set up mass customization factories for Nike, Reebok and Timberland</h4>
-    </div>
     <div class="dot-line">
       <div class="line"></div>
       <div class="dots">
@@ -15,17 +7,54 @@
         <div class="dot"></div>
         <div class="dot"></div>
         <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
       </div>
+    </div>
+    <div class="home__milestones__grid side-1">
+      <h4>1993</h4>
+      <h4>Joined Timbuk2 as first employee</h4>
+    </div>
+    <div class="home__milestones__grid side-2">
+      <h4>1995</h4>
+      <h4>Acquired controlling stake in Timbuk2</h4>
     </div>
      <!-- <img src="../static/img/dots.svg" alt="" class="dot-line"> -->
     <div class="home__milestones__grid side-3">
-      <h4>2005</h4>
-      <h4>Led product development at CafePress and Zazzle</h4>
+      <h4>1996</h4>
+      <h4>Launched web’s first graphic-based design tool </h4>
     </div>
     <div class="home__milestones__grid side-4">
-      <h4>2010</h4>
-      <h4>Founded SKYOU to bring big brand quality to any brand</h4>
-    </div>      
+      <h4>2002</h4>
+      <h4>Sold Timbuk2 to private equity group</h4>
+    </div>    
+    <div class="home__milestones__grid side-5">
+      <h4>2003</h4>
+      <h4>Built mass customization factory for NikeiD</h4>
+    </div>    
+    <div class="home__milestones__grid side-6">
+      <h4>2005</h4>
+      <h4>Led Cafepresses product development</h4>
+    </div> 
+    <div class="home__milestones__grid side-7">
+      <h4>2006</h4>
+      <h4>Launched Reebok’s RBK Custom service, under Confego</h4>
+    </div>  
+    <div class="home__milestones__grid side-8">
+      <h4>2008</h4>
+      <h4>Sold Confego to Zazzle; an on-demand marketplace</h4>
+    </div> 
+    <div class="home__milestones__grid side-9">
+      <h4>2011</h4>
+      <h4>Started SKYOU to bring big-brand quality to any brand</h4>
+    </div>   
+    <div class="home__milestones__grid side-10">
+      <h4>2014</h4>
+      <h4>Launched web-based 3d design tool</h4>
+    </div> 
   </div>
 </template>
 
@@ -67,10 +96,34 @@ export default {
     .side-4 {
       grid-column: 3 / 4;
       grid-row: 4 / 5;    
-    }    
+    }  
+    .side-5{
+      grid-column: 1 / 2;
+      grid-row: 5 / 6;
+    }  
+    .side-6{
+      grid-column: 3 / 4;
+      grid-row: 6 / 7;
+    }
+    .side-7{
+      grid-column: 1 / 2;
+      grid-row: 7 / 8;
+    }
+    .side-8{
+      grid-column: 3 / 4;
+      grid-row: 8 / 9;
+    }
+    .side-9{
+      grid-column: 1 / 2;
+      grid-row: 9 / 10;
+    }
+    .side-10{
+      grid-column: 3 / 4;
+      grid-row: 10 / 11;
+    }
     .dot-line {
       grid-column: 2 / 3;
-      grid-row: 1 / 5;
+      grid-row: 1 / 11;
       position: relative;
       .line {
         position: absolute;
