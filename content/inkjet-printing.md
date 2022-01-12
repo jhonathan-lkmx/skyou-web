@@ -148,7 +148,7 @@ This fabric is made from post consumer waste plastic.  The plastic is chipped do
 
 <block  id="inkjet-printing__stock__options__image">
 
-<!-- ![inkjet printing shirts image](./img/inkjet-printing-shirts.jpg) -->
+![inkjet printing shirts image](./img/inkjet-printing-shirts.jpg)
 
 </block>
 
@@ -227,7 +227,7 @@ This fabric has a peached surface and a bit of stretch.  A good alternative to c
 
 <block  id="inkjet-printing__stock__options__image">
 
-<!-- ![inkjet printing button up image](./img/inkjet-printing-button-up.jpg) -->
+![inkjet printing button up image](./img/inkjet-printing-button-up.jpg)
 
 </block>
 
@@ -296,7 +296,7 @@ Composed of a soft and durable 4 way stretch jersey, this fabric is perfect for 
 
 <block  id="inkjet-printing__stock__options__image">
 
-<!-- ![inkjet printing leggings image](./img/inkjet-printing-leggings.jpg) -->
+![inkjet printing leggings image](./img/inkjet-printing-leggings.jpg)
 
 </block>
 
