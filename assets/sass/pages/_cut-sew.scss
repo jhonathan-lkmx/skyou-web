@@ -2,7 +2,6 @@
   &__hero {
     padding-top: var(--column-space-l);
     padding-bottom: var(--column-space-l);
-    background-color: var(--color-primary-cyan-process);
     &__info {
       .content {
         display: grid;
@@ -11,7 +10,7 @@
           display: grid;
           gap: var(--f-gutter);
           h1 {
-            color: var(--color-neutral-10);
+            color: var(--color-primary-fashion-fuchsia);
             margin-bottom: 0;
           }
           h1 {
@@ -21,7 +20,7 @@
             }
           }
           h3, p {
-            color: var(--color-neutral-07);
+            color: var(--color-neutral-03);
             margin-bottom: 0;
           }
         }
