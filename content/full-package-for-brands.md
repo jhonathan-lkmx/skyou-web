@@ -50,9 +50,13 @@ SKYOU is a full package manufacturing partner for your brand. We manufacture for
 
 ![icon-quote-calculator](./img/icon-quote-calculator.svg)
 
-### You request a quote
+### 1. Setup your account. 
 
-Reach out to us at sales@skyou.com to quote your project. Quotes for new products are usually returned within 48 hours.
+Request access to the 3d design tool.
+
+Use our stock bodies, or request a quote for custom bodies that can be developed and added to the design tool"
+
+Need a custom style?  Reach out to us at sales@skyou.com to quote your project.  Quotes for new products are usually returned within 48 hours
 
 </block>
 
@@ -60,7 +64,7 @@ Reach out to us at sales@skyou.com to quote your project. Quotes for new product
 
 ![icon-3d-cube](./img/icon-3d-cube.svg)
 
-### 2. We set you up
+### 2. Request a quote
 
 We'll provide an account that has access to our 3D Design Tool. We can add your custom patterns or help you develop new products.
 
@@ -153,6 +157,8 @@ Development and production timelines are established, and the project begins.
 
 ![image-shirt](./img/full-package-4.jpg)
 
+<btn type="secondary" url="/products" display="full">View products</btn>
+
 </template>
 
 </block>
@@ -179,6 +185,8 @@ We go through extensive fit testing, and quality checks to ensure each product i
 <template v-slot:image>
 
 ![wealth manufacturing image](./img/full-package-6.jpg)
+
+<btn type="secondary" url="/products" display="full">View products</btn>
 
 </template>
 
