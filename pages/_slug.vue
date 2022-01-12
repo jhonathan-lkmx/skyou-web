@@ -6,18 +6,21 @@
 
 <script>
 export default {
-  async asyncData({ $content, params, error }) {
-    const slug = params.slug || "index";
-    const page = await $content(slug)
-      .fetch()
-      .catch(err => {
-        error({ statusCode: 404, message: "Page not found" });
-      });
-    return {
-      page,
-      title: page.title,
-      description: page.description
-    };
+  async asyncData({ $content, params, error }){
+    try{
+      const page = await $content('', params.slug).fetch()
+
+      return{
+        page,
+        title: page.title,
+        description: page.description,
+      }
+    }catch(err){
+      error({
+        statusCode: 404,
+        messege: 'Page could not be found'
+      })
+    }
   },
   head() {
     return {

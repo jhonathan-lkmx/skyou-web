@@ -64,7 +64,7 @@ export default {
         {
           title: "Categories",
           to: "/category",
-          sigleMenu: "categories"
+          sigleMenu: "is-single-menu"
         },
         {
           title: "About Us",
