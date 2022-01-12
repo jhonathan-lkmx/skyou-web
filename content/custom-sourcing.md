@@ -7,8 +7,10 @@ description: Let SKYOU act as your overseas sourcing office.
 
 # Custom Sourcing
 
-Can’t find the product your customer wants on ESP/SAGE? No worries, we’re here to help. We have a full time sourcing team based at our Guangzhou factory to source nearly anything you can provide a sample or link for. No hassles, on time delivery, and no worries about quality.  
+Can’t find the product you want to develop in our existing catalog? No worries, we’re here to help. We have a full time sourcing team based at our Guangzhou factory to source nearly anything you can provide a sample or link for. No hassles, on time delivery, and no worries about quality.  
 **Let SKYOU act as your overseas sourcing office.** 
+
+Are you a fashion brand looking to develop your own fit or style, we have full time pattern makers in our Guangzhou and Tijuana offices that can turn your ideas into reality
 
 </columns>
 
