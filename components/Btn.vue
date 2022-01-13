@@ -53,7 +53,6 @@ export default {
       }
     }
     &.secondary {
-      background: var(--color-neutral-08);
       color: var(--color-neutral-01);
       border: 1px solid var(--color-primary-fashion-fuchsia);
 
