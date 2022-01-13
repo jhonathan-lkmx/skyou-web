@@ -17,7 +17,7 @@ We have over 20 years of experience in digital printing and decoration technique
 
 <block id="inkjet-printing__hero__image-content">
 
-![inkjet printing hero image](./img/shopify-app-1.jpg)
+![inkjet printing hero image](./img/inkjet-printing-hero.jpg)
 
 </block>
 
