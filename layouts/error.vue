@@ -28,12 +28,25 @@
   }
 </script>
 <style lang="scss" scoped>
+@import "@lkmx/flare/src/functions/_respond-to.scss";
+
 .container{
     width: 100%;
     display: flex;
     justify-content: center;
 
     &__block{
+
+        @include respond_to("<=s"){
+            overflow: hidden;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: static;
+        }
+
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -119,6 +132,21 @@
         }
 
         .label{
+
+            @include respond_to("<=s"){
+                width: 250px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                padding: 0px;
+                position: static;
+                flex: none;
+                order: 1;
+                flex-grow: 0;
+                margin: 26px 0px;
+            }
+
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -140,6 +168,12 @@
             margin: 26px 0px;
 
             &__text{
+
+                @include respond_to("<=s"){
+                    width: 250px;
+                    font-size: 10px;
+                }
+
                 position: static;
                 width: 496px;
                 height: 58px;
@@ -195,6 +229,16 @@
             margin: 26px 0px;
 
             &__label{
+
+                @include respond_to("<=s"){
+                    width: 400px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    padding: 0px;
+                }
+
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -216,6 +260,16 @@
                 margin: 42px 0px;
 
                 &__text{
+                    
+                    @include respond_to("<=s"){
+                        width: 400px;
+                        height: 50px;
+                        font-size: 20px;
+                        position: static;
+                        left: calc(50% - 400px/2);
+                        top: calc(50% - 50px/2);
+                    }
+
                     position: static;
                     width: 710px;
                     height: 82px;
