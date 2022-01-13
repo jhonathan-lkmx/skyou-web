@@ -49,11 +49,9 @@
             </div>
           </div>
           <div class="simple-footer__content__products">
-            <h4>Products</h4>
+            <h4>Category</h4>
             <div class="simple-footer__content__products__links-container">
-              <nuxt-link to="/category">Apparel</nuxt-link>
-              <nuxt-link to="/category">Bags</nuxt-link>
-              <nuxt-link to="/category">Footwear</nuxt-link>
+              <nuxt-link to="/category">Category</nuxt-link>
             </div>
           </div>
           <div class="simple-footer__content__about-us">
