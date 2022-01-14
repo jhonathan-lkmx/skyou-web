@@ -5,7 +5,7 @@
       logo="skyou-black--horizontal.svg"
       :mainNavigation="[
         { title: 'Home', to: '/' },
-        { title: 'Products', to: '/products' },
+        { title: 'Category', to: '/category' },
         { title: 'About Us', to: '/about-us' },
         { title: 'Our Technology', to: '' },
         { title: 'Our Services', to: '' },

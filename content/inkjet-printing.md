@@ -57,7 +57,7 @@ We have over 20 years of experience in digital printing and decoration technique
 
 ## Reactive Inkjet
 
-**Colors come out bright and bold** with **zero hand feel**.  The ink is chemically bonded to the cellulose fabric and will **never crack, peel or fade**.  Excellent wash fastness, far superior to POD pigment based inks.
+**Colors come out bright and bold** with **zero hand feel**. The ink is chemically bonded to the cellulose fabric and will **never crack, peel or fade**. Excellent wash fastness, far superior to POD pigment based inks.
 
 ![reactive-inkjet image](./img/inkjet-printing-reactive.jpg)
 
@@ -73,7 +73,7 @@ We use reactive inkjet printing for all of our cotton/cellulose-based fabrics.
 
 ## Sublimation
 
-Sublimation has a wide color gamut, is great **for bold and bright prints,** has **zero hand feel, and never cracks, peels, or fades.**
+Sublimation has a wide color gamut, is great for **bold and bright prints**, has **zero hand feel, and never cracks, peels, or fades**.
 
 ![sublimation image](./img/inkjet-printing-sublimation.jpg)
 

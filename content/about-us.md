@@ -11,7 +11,7 @@ description: Using our expertise in one-off manufacturing, we envisioned bringin
 
 SKYOU is a web-based product platform focused on low/no minimum order quantity retail-quality products.
 
-We bridge the gap between factories and brands with our innovative 3D design tool. We own our own factories in Guangzhou China and Tijuana, Mexico focused on no-moq manufacturing.  
+We bridge the gap between factories and brands with our innovative 3D design tool. We own our own factories in Guangzhou, China and Tijuana, Mexico focused on no-moq manufacturing.  
 
 </block>
 
@@ -101,7 +101,7 @@ Prior to founding SKYOU we started the first web-based mass customization compan
 
 <block>
 
-## Our Milestones
+## Milestones
 
 ### Over 20 years of manufacturing experience
 

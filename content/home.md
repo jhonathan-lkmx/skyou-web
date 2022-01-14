@@ -51,7 +51,7 @@ description: The SKYOU platform services a few different customer groups, select
 
 <template v-slot:grid-image>
 
-![Sell through shopify image](./img/homepage-services-1.jpg)
+![Sell through shopify image](./img/shopify-pic.png)
 
 </template>
 
@@ -79,7 +79,7 @@ Install the **free SKYOU app** through the Shopify marketplace and sell with **n
 
 <template v-slot:grid-image>
 
-![Order in bulk image](./img/homepage-services-2.jpg)
+![Order in bulk image](./img/bulk-pic.png)
 
 </template>
 
@@ -176,13 +176,13 @@ Order as many units as you need.
 
 <template v-slot:title>
 
-### Full package retail sourcing
+### Full-package Retail Sourcing
 
 </template>
 
 <template v-slot:description>
 
-Woven labels, hangtags, seam tags.
+Woven labels, hang tags, seam tags.
 
 </template>
 
@@ -220,13 +220,13 @@ All over inkjet printing for cotton, poly, rayon, tencel, vegan leather, and nea
 
 <template v-slot:title>
 
-### No middlemen
+### No Middlemen
 
 </template>
 
 <template v-slot:description>
 
-We own and operate factories in Guangzhou, China and Tijuana, Mexico.
+We own and operate our own factories in Guangzhou, China and Tijuana, Mexico.
 
 </template>
 
@@ -242,13 +242,13 @@ We own and operate factories in Guangzhou, China and Tijuana, Mexico.
 
 <template v-slot:title>
 
-### 3d design tool
+### 3D Design Tool
 
 </template>
 
 <template v-slot:description>
 
-Our tool is a pixel to inch representation of what we’ll manufacture for you.  No more tech packs, no more confusion
+Our Design Tool is a pixel to thread representation of what we’ll manufacture for you. No more tech packs, no more confusion.
 
 </template>
 
@@ -273,7 +273,7 @@ Our tool is a pixel to inch representation of what we’ll manufacture for you. 
 
 # Milestones
 
-### Over 20 years of manufacturing experience
+### Over 20 Years of Manufacturing Experience
 
 </block>
 
