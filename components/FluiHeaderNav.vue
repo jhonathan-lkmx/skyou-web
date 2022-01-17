@@ -1,17 +1,9 @@
 <template>
   <nav class="flui-header-nav">
     <ul class="flui-header-nav__items">
-      <li
-        v-for="(item, index) in navItems"
-        :key="index"
-        class="flui-header-nav__items__single-item"
-      >
-        <a
-          class="flui-header-nav__items__single-item__top-anchor"
-          :href="item.to"
-          :class="item.sigleMenu"
-        >
-          {{ item.title }}
+      <li v-for="(item, index) in navItems" :key="index" class="flui-header-nav__items__single-item">
+        <a class="flui-header-nav__items__single-item__top-anchor" :href="item.to" >
+          <span :class="item.sigleMenu"> {{item.title}} </span>
           <svg
             v-if="item.dropDownList"
             class="flui-header-nav__items__single-item__top-anchor__chevron"
@@ -30,20 +22,9 @@
             />
           </svg>
         </a>
-        <ul
-          class="flui-header-nav__items__single-item__dropdown"
-          v-if="item.dropDownList"
-        >
-          <li
-            v-for="(dropdownItem, index) in item.dropDownList"
-            :key="index"
-            class="flui-header-nav__items__single-item__dropdown__single-item"
-          >
-            <nuxt-link
-              class="flui-header-nav__items__single-item__dropdown__single-item__anchor"
-              :to="dropdownItem.to"
-              >{{ dropdownItem.title }}</nuxt-link
-            >
+        <ul class="flui-header-nav__items__single-item__dropdown">
+          <li v-for="(dropdownItem, index) in item.dropDownList" :key="index" class="flui-header-nav__items__single-item__dropdown__single-item">
+            <nuxt-link class="flui-header-nav__items__single-item__dropdown__single-item__anchor" :to="dropdownItem.to" >{{ dropdownItem.title }}</nuxt-link >
           </li>
         </ul>
       </li>
@@ -69,6 +50,7 @@ export default {
         {
           title: "About Us",
           to: "/about-us",
+          sigleMenu: "is-single-menu"
         },
         {
           title: "Our Technology",
@@ -105,7 +87,7 @@ export default {
         {
           title: "Custom Sourcing",
           to: "/custom-sourcing",
-          sigleMenu: "is-single-menu",
+          sigleMenu: "is-single-menu"
         },
       ],
     };
@@ -206,6 +188,13 @@ export default {
       console.log('This should be an error ', me2);
     }
   },
+  computed: {
+    initMenu() {
+      return {
+        'navIsOpen': this.isNavOpen,
+      }
+    }
+  },
   mounted() {
     this.setNav();
     
@@ -214,7 +203,7 @@ export default {
   asyncData({ $csapi }) {
       $csapi('asyncData')
   }
-};
+}
 </script>
 
 <style lang="scss">

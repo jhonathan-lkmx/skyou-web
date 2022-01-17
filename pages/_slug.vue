@@ -54,13 +54,4 @@ export default {
     };
   }
 };
-// export default {
-//   async asyncData ({ $content }) {
-//     const page = await $content('test').fetch()
-
-//     return {
-//       page
-//     }
-//   }
-// }
 </script>

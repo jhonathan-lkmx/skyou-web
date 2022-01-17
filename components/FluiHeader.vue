@@ -212,17 +212,7 @@ export default {
     grid-auto-flow: column;
     justify-content: center;
     height: 100%;
-    &:not(.actions) {
-      /* a {
-        height: auto;
-        padding: 23px var(--f-gutter);
-        @include respond-to('<=m') {
-          width: 100%;
-          text-align: center;
-          padding: var(--f-gutter);
-        }
-      } */
-    }
+
     @include respond-to('<=m') {
       display: none;
       align-content: start;

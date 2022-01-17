@@ -117,8 +117,6 @@ export default {
 
 <style lang="scss">
 @import "@lkmx/flare/src/functions/_respond-to.scss";
-:root {
-}
 
 #__nuxt {
   .simple-footer {
