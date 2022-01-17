@@ -69,7 +69,6 @@ export default {
         {
           title: "About Us",
           to: "/about-us",
-          sigleMenu: "is-single-menu",
         },
         {
           title: "Our Technology",
