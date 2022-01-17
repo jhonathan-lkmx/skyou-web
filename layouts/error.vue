@@ -3,7 +3,7 @@
         <div class="container__block">
             <label class="label">
                 <a class="label__text">
-                    his page doesn't exist or some error ocurred. Maybe if you go to our home page you can find what you need.
+                    His page doesn't exist or some error ocurred. Maybe if you go to our home page you can find what you need.
                 </a>
             </label>
             <div class="errorNotFound">
