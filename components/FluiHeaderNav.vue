@@ -2,7 +2,7 @@
   <nav class="flui-header-nav">
     <ul class="flui-header-nav__items">
       <li v-for="(item, index) in navItems" :key="index" class="flui-header-nav__items__single-item">
-        <a class="flui-header-nav__items__single-item__top-anchor" :href="item.to" >
+        <nuxt-link class="flui-header-nav__items__single-item__top-anchor" :to="item.to" >
           <span :class="item.sigleMenu"> {{item.title}} </span>
           <svg
             v-if="item.dropDownList"
@@ -21,12 +21,14 @@
               stroke-linejoin="round"
             />
           </svg>
-        </a>
-        <ul class="flui-header-nav__items__single-item__dropdown">
-          <li v-for="(dropdownItem, index) in item.dropDownList" :key="index" class="flui-header-nav__items__single-item__dropdown__single-item">
-            <nuxt-link class="flui-header-nav__items__single-item__dropdown__single-item__anchor" :to="dropdownItem.to" >{{ dropdownItem.title }}</nuxt-link >
-          </li>
-        </ul>
+        </nuxt-link>
+        <nav>
+          <ul class="flui-header-nav__items__single-item__dropdown">
+            <li v-for="(dropdownItem, index) in item.dropDownList" :key="index" class="flui-header-nav__items__single-item__dropdown__single-item">
+              <nuxt-link class="flui-header-nav__items__single-item__dropdown__single-item__anchor" :to="dropdownItem.to" >{{ dropdownItem.title }}</nuxt-link >
+            </li>
+          </ul>
+        </nav>
       </li>
     </ul>
   </nav>
