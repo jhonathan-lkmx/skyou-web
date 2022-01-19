@@ -2,8 +2,8 @@
   <nav class="flui-header-nav">
     <ul class="flui-header-nav__items">
       <li v-for="(item, index) in navItems" :key="index" class="flui-header-nav__items__single-item">
-        <a class="flui-header-nav__items__single-item__top-anchor" :href="item.to" >
-          <span :class="item.sigleMenu"> {{item.title}} </span>
+        <a :class="item.sigleMenu" class="flui-header-nav__items__single-item__top-anchor" :href="item.to" >
+          <span> {{item.title}} </span>
           <svg
             v-if="item.dropDownList"
             class="flui-header-nav__items__single-item__top-anchor__chevron"
