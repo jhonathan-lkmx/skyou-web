@@ -235,7 +235,7 @@ This fabric has a peached surface and a bit of stretch.  A good alternative to c
 
 <block  id="inkjet-printing__stock__options__image">
 
-![inkjet printing bags image](./img/inkjet-printing-bags.jpg)
+![inkjet printing bags image](./img/3-BAG-AND-TOTES.jpg)
 
 </block>
 
