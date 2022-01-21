@@ -1,5 +1,5 @@
 ---
-title: Category
+title: Products
 description:
 ---
 
@@ -7,7 +7,7 @@ description:
 
 <block>
 
-# Categories
+# Products
 
 </block>
 

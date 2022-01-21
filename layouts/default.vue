@@ -12,7 +12,7 @@
         { title: 'Custom Sourcing', to: '/custom-sourcing' }
       ]"
       :actions="[
-        { title: '', to: '/' },
+        { title: 'Login', to: '' },
         { title: '', to: '/' }
       ]"
     />
@@ -49,9 +49,9 @@
             </div>
           </div>
           <div class="simple-footer__content__products">
-            <h4>Category</h4>
+            <h4>Products</h4>
             <div class="simple-footer__content__products__links-container">
-              <nuxt-link to="/category">Category</nuxt-link>
+              <nuxt-link to="/products">Products</nuxt-link>
             </div>
           </div>
           <div class="simple-footer__content__about-us">
@@ -76,6 +76,12 @@
             <div class="simple-footer__content__our-services__links-container">
               <nuxt-link to="/shopify-app">Shopify App</nuxt-link>
               <nuxt-link to="/full-package-for-brands">Full Package for Brands</nuxt-link>
+            </div>
+          </div>
+          <div class="simple-footer__content__custom-sourcing">
+            <h4>Custom Sourcing</h4>
+            <div class="simple-footer__content__custom-sourcing__links-container">
+              <nuxt-link to="/custom-sourcing">Custom Sourcing</nuxt-link>
             </div>
           </div>
         </section>
@@ -131,7 +137,7 @@ export default {
     }
     &__content {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(6, 1fr);
       /* grid-auto-flow: column;  */
       @include respond-to("<=m") {
         grid-template-columns: 1fr;
@@ -225,7 +231,8 @@ export default {
       &__products,
       &__about-us,
       &__our-technology,
-      &__our-services {
+      &__our-services,
+      &__custom-sourcing {
         display: grid;
         grid-template-rows: auto 1fr;
         gap: var(--f-gutter);

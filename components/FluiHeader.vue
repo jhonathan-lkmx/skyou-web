@@ -29,16 +29,23 @@
 
     <!-- Actions -->
     <nav class="flui-header__actions" aria-label="actions">
-      <a v-for="(action, index) in actions" :key="index" :href="action.to">
-        <slot name="headerActions">{{ action.title }}</slot>
-      </a>
+      <btn-login type="SignUp" url="" display="full">      
+        <a v-for="(action, index) in actions" :key="index" :href="action.to">
+          <slot name="headerActions">{{ action.title }}</slot>
+        </a>
+      </btn-login>
     </nav>
 
   </header>
 </template>
 
 <script>
+import btnLogin from './Btn.vue'
+
 export default {
+  components:{
+    btnLogin
+  },
   data: function () {
     return {
       isNavOpen: false,
@@ -162,11 +169,7 @@ export default {
       justify-items: start;
       grid-template-columns: 1fr;
       grid-auto-flow: row;
-
-      /* height: var(--f-gutter-xl);
-      width: var(--f-gutter-xl); */
       background-color: transparent;
-
       padding: 20px var(--f-gutter);
     }
     &:hover {

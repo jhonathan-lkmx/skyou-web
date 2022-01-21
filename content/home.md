@@ -79,7 +79,7 @@ Install the **free SKYOU app** through the Shopify marketplace and sell with **n
 
 <template v-slot:grid-image>
 
-![Order in bulk image](./img/bulk-pic.png)
+![Order in bulk image](./img/7-ORDER-IN-BULK.jpg)
 
 </template>
 

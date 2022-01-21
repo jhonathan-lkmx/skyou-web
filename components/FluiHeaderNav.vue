@@ -41,8 +41,8 @@ export default {
           sigleMenu: "is-single-menu",          
         },
         {
-          title: "Categories",
-          to: "/category",
+          title: "Products",
+          to: "/products",
           sigleMenu: "is-single-menu"
         },
         {
