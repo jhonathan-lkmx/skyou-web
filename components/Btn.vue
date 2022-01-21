@@ -79,6 +79,21 @@ export default {
         color: var(--color-primary-disabled);
       }
     }
+    &.SignUp{
+      background-color: var(--color-primary-fashion-fuchsia);
+      color: var(--color-neutral-10);
+
+      &:hover {
+        color: var(--color-neutral-10);
+      }
+      &:disabled {
+        color: var(--color-neutral-06);
+      }
+
+      &:active {
+        color: var(--color-primary-fashion-fuchsia);
+      }
+    }
     &.full {
       max-width: 100%;
       text-align: center;

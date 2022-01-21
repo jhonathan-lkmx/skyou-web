@@ -52,9 +52,9 @@ SKYOU is a full package manufacturing partner for your brand. We manufacture for
 
 ### 1. Setup your account. 
 
-Request access to the 3d design tool.
-
 Use our stock bodies, or request a quote for custom bodies that can be developed and added to the design tool"
+
+<btn type="SignUp" url="" display="full">Sign Up</btn>
 
 Need a custom style?  Reach out to us at sales@skyou.com to quote your project.  Quotes for new products are usually returned within 48 hours
 
