@@ -69,7 +69,7 @@ SKYOU has developed and patented an industry-leading browser based 3D Design Too
 
 <template v-slot:image>
 
-![3d design tool 2 image](./img/3d-design-tool-2.jpg)
+![3d design tool 2 image](./img/5-ACURACY.jpg)
 
 </template>
 
@@ -117,7 +117,7 @@ SKYOU has developed and patented an industry-leading browser based 3D Design Too
 
 <template v-slot:image>
 
-![3d design tool 6 image](./img/3d-design-tool-6.jpg)
+![3d design tool 6 image](./img/6-CUSTOM-TEXT.png)
 
 </template>
 
