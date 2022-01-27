@@ -191,6 +191,7 @@ export default{
         display: grid;
         grid-template-columns: 20% 40% 20% 20%;
         margin-bottom: 16px;
+
         @include respond-to('<=m'){
             display: grid;
             grid-template-columns: 10% auto 10%;
@@ -204,6 +205,7 @@ export default{
         &__container1{
             height: auto;
             grid-column: 2 / 3;
+            margin-bottom: 16px;
             @include respond-to('<=m'){
                 grid-row: 1 / 2;
 
