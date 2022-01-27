@@ -1,0 +1,102 @@
+{
+    "id": 1,
+    "name": "T-Shirt",
+    "products": [
+        {
+            "id": 256,
+            "name": "Men's Reversible Lacrosse Jersey",
+            "startingPrice": 15.00,
+            "image":"../../img/hoodies-sweatshirts-10.jpg"
+        },
+        {
+            "id": 255,
+            "name": "Men's Reversible Lacrosse Jersey",
+            "startingPrice": 15.00,
+            "image":"../../img/asi-ppai-hero.jpg"
+        },
+        {
+            "id": 253,
+            "name": "Women's T-shirt, relaxed fit (poly)",
+            "startingPrice": 23.95,
+            "image":"../../img/5-ACURACY.jpg"
+        },
+        {
+            "id": 13,
+            "name": "Men's Long Sleeve T-Shirt",
+            "startingPrice": 32,
+            "image":"../../img/customization-image.png"
+        },
+        {
+            "id": 81,
+            "name": "Men's T-Shirt (SJ)",
+            "startingPrice": 24,
+            "image":"../../img/effortless-design.png"
+        },
+        {
+            "id": 17,
+            "name": "Women's Long Sleeve V-Neck",
+            "startingPrice": 32,
+            "image":"../../img/flexibility-image.png"
+        },
+        {
+            "id": 16,
+            "name": "TS-WS-LR-SL-CC-FST",
+            "startingPrice": 32,
+            "image":"../../img/homepage-services-1.jpg"
+        },
+        {
+            "id": 14,
+            "name": "TS-MS-LR-SS-CV-FST",
+            "startingPrice": 24,
+            "image":"../../img/products-home-1.jpg"
+        },
+        {
+            "id": 10,
+            "name": "TS-WS-LR-SS-CC-FST",
+            "startingPrice": 24,
+            "image":"../../img/hoodies-sweatshirts-1.jpg"
+        },
+        {
+            "id": 93,
+            "name": "Pearl Izumi Tshirt",
+            "startingPrice": 24,
+            "image":"../../img/hoodies-sweatshirts-3.jpg"
+        },
+        {
+            "id": 82,
+            "name": "Men's T-Shirt",
+            "startingPrice": 24,
+            "image":"../../img/hoodies-sweatshirts-4.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Global product name56",
+            "startingPrice": 24,
+            "image":"../../img/hoodies-sweatshirts-5.jpg"
+        },
+        {
+            "id": 7,
+            "name": "Global product name",
+            "startingPrice": 24,
+            "image":"../../img/hoodies-sweatshirts-6.jpg"
+        },
+        {
+            "id": 15,
+            "name": "TS-MS-LR-SS-CV-FS",
+            "startingPrice": 24,
+            "image":"../../img/cut-sew.png"
+        },
+        {
+            "id": 56,
+            "name": "TS-WS-LR-SS-CV-FST",
+            "startingPrice": 24,
+            "image":"../../img/hoodies-sweatshirts-8.jpg"
+        },
+        {
+            "id": 80,
+            "name": "SportsBra",
+            "startingPrice": 24,
+            "image":"../../img/hoodies-sweatshirts-9.jpg"
+        }
+    ]
+}
