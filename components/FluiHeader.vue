@@ -375,7 +375,7 @@ export default {
     align-items: center;
     padding: 20px 48px 48px;
     position: fixed;
-    width: 100%;
+    width: 480px;
     @include respond-to('<=m'){
       width: 90%;
       @include respond-to('<=s'){
