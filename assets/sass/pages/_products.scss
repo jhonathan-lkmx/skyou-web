@@ -1,4 +1,4 @@
-#category {
+#products {
   &__title {
     padding-top: var(--column-space-l);
     padding-bottom: var(--column-space-l);
@@ -11,7 +11,22 @@
     }
   }
   &__items {
-    background-color: var(--color-neutral-10);
-    padding-bottom: var(--column-space-l);
+    &__item{
+      background-color: var(--color-neutral-10);
+      padding-bottom: 120px;
+      
+      &__info{
+        padding-top: var(--column-space-l);
+        padding-bottom: var(--column-space-l);
+        .content {
+          .box {
+            background-color: var(--color-neutral-09);
+            border-radius: 4px;
+            padding: var(--f-gutter-l);
+            height: auto;
+          }
+        }
+      }
+    }
   }
 }

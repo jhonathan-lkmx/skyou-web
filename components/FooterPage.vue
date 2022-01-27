@@ -1,123 +1,82 @@
 <template>
   <simple-layout>
-    <flui-header
-      mode="full"
-      logo="skyou-black--horizontal.svg"
-      :mainNavigation="[
-        { title: 'Home', to: '/' },
-        { title: 'Category', to: '/category' },
-        { title: 'About Us', to: '/about-us' },
-        { title: 'Our Technology', to: '' },
-        { title: 'Our Services', to: '' },
-        { title: 'Custom Sourcing', to: '/custom-sourcing' }
-      ]"
-      :actions="[
-        { title: 'Login', to: '/ssoLogin' },
-        { title: '', to: '/' }
-      ]"
-    />
-    <Nuxt />
-    <template #footer>
-      <div v-if="page != true">
-        <simple-footer>
-          <section class="simple-footer__content">
-            <div class="simple-footer__content__info-skyou">
-              <div class="simple-footer__content__skyou">
-                <img
-                  src="../assets/img/skyou-white--horizontal.svg"
-                  alt="skyou logo"
-                  class="simple-footer__content__skyou--logo"
-                />
-              </div>
-              <div class="simple-footer__content__contact">
-                <div class="simple-footer__content__contact__mail">
-                  <img src="../assets/img/icon-mail.svg" alt="mail" />
-                  <a href="mailto:sales@skyou.com">sales@skyou.com</a>
-                </div>
-                <div class="simple-footer__content__contact__phone">
-                  <img src="../assets/img/icon-phone.svg" alt="telephone" />
-                  <a href="tel:+1 6197451300">+1 619-745-1300</a>
-                </div>
-                <div class="simple-footer__content__contact__location">
-                  <img
-                    src="../assets/img/icon-location-address.svg"
-                    alt="location"
-                  />
-                  <a href="https://goo.gl/maps/mketr9xo5rWiPiNZ7" target="_blank">
-                    2364 Paseo de las Americas, Unit 104-1541, San Diego, CA 92154, USA
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="simple-footer__content__products">
-              <h4>Products</h4>
-              <div class="simple-footer__content__products__links-container">
-                <nuxt-link to="/products">Products</nuxt-link>
-              </div>
-            </div>
-            <div class="simple-footer__content__about-us">
-              <h4>About Us</h4>
-              <div class="simple-footer__content__about-us__links-container">
-                <nuxt-link to="/about-us">Our Story</nuxt-link>
-                <nuxt-link to="/about-us#contact-us">Contact Us</nuxt-link>
-              </div>
-            </div>
-            <div class="simple-footer__content__our-technology">
-              <h4>Our Technology</h4>
-              <div
-                class="simple-footer__content__our-technology__links-container"
-              >
-                <nuxt-link to="/3d-design-tool">3D Design Tool</nuxt-link>
-                <nuxt-link to="/inkjet-printing">Inkjet Printing</nuxt-link>
-                <nuxt-link to="/cut-sew">Cut/Sew</nuxt-link>
-              </div>
-            </div>
-            <div class="simple-footer__content__our-services">
-              <h4>Our Services</h4>
-              <div class="simple-footer__content__our-services__links-container">
-                <nuxt-link to="/shopify-app">Shopify App</nuxt-link>
-                <nuxt-link to="/full-package-for-brands">Full Package for Brands</nuxt-link>
-              </div>
-            </div>
-            <div class="simple-footer__content__custom-sourcing">
-              <h4>Custom Sourcing</h4>
-              <div class="simple-footer__content__custom-sourcing__links-container">
-                <nuxt-link to="/custom-sourcing">Custom Sourcing</nuxt-link>
-              </div>
-            </div>
-          </section>
-        </simple-footer>
-        <section class="simple-footer__legal">
-          <div class="simple-footer__legal__skyou-legend">
-            <p>© SKYOU 2021. All rights reserved.</p>
+    <simple-footer>
+      <section class="simple-footer__content">
+        <div class="simple-footer__content__info-skyou">
+          <div class="simple-footer__content__skyou">
+            <img
+              src="../assets/img/skyou-white--horizontal.svg"
+              alt="skyou logo"
+              class="simple-footer__content__skyou--logo"
+            />
           </div>
-        </section>
+          <div class="simple-footer__content__contact">
+            <div class="simple-footer__content__contact__mail">
+              <img src="../assets/img/icon-mail.svg" alt="mail" />
+              <a href="mailto:sales@skyou.com">sales@skyou.com</a>
+            </div>
+            <div class="simple-footer__content__contact__phone">
+              <img src="../assets/img/icon-phone.svg" alt="telephone" />
+              <a href="tel:+1 6197451300">+1 619-745-1300</a>
+            </div>
+            <div class="simple-footer__content__contact__location">
+              <img
+                src="../assets/img/icon-location-address.svg"
+                alt="location"
+              />
+              <a href="https://goo.gl/maps/mketr9xo5rWiPiNZ7" target="_blank">
+                2364 Paseo de las Americas, Unit 104-1541, San Diego, CA 92154, USA
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="simple-footer__content__products">
+          <h4>Products</h4>
+          <div class="simple-footer__content__products__links-container">
+            <nuxt-link to="/products">Products</nuxt-link>
+          </div>
+        </div>
+        <div class="simple-footer__content__about-us">
+          <h4>About Us</h4>
+          <div class="simple-footer__content__about-us__links-container">
+            <nuxt-link to="/about-us">Our Story</nuxt-link>
+            <nuxt-link to="/about-us#contact-us">Contact Us</nuxt-link>
+          </div>
+        </div>
+        <div class="simple-footer__content__our-technology">
+          <h4>Our Technology</h4>
+          <div
+            class="simple-footer__content__our-technology__links-container"
+          >
+            <nuxt-link to="/3d-design-tool">3D Design Tool</nuxt-link>
+            <nuxt-link to="/inkjet-printing">Inkjet Printing</nuxt-link>
+            <nuxt-link to="/cut-sew">Cut/Sew</nuxt-link>
+          </div>
+        </div>
+        <div class="simple-footer__content__our-services">
+          <h4>Our Services</h4>
+          <div class="simple-footer__content__our-services__links-container">
+            <nuxt-link to="/shopify-app">Shopify App</nuxt-link>
+            <nuxt-link to="/full-package-for-brands">Full Package for Brands</nuxt-link>
+          </div>
+        </div>
+        <div class="simple-footer__content__custom-sourcing">
+          <h4>Custom Sourcing</h4>
+          <div class="simple-footer__content__custom-sourcing__links-container">
+            <nuxt-link to="/custom-sourcing">Custom Sourcing</nuxt-link>
+          </div>
+        </div>
+      </section>
+    </simple-footer>
+    <section class="simple-footer__legal">
+      <div class="simple-footer__legal__skyou-legend">
+        <p>© SKYOU 2021. All rights reserved.</p>
       </div>
-    </template>
+    </section>
   </simple-layout>
 </template>
-
 <script>
-import FluiHeader from '../components/FluiHeader.vue';
 export default {
-  components: { FluiHeader },
-  data(){
-    return{
-      pagLogin: '/ssoLogin',
-      pageActual: this.$route.params.slug,
-      page: false
-    }
-  },
-  methods:{
-    getParamPage(){
-      if(this.pageActual == this.pagLogin){
-        this.page=true
-      }
-    }
-  },
-  mounted() {
-    this.getParamPage()
-  }
 };
 </script>
 
@@ -268,7 +227,6 @@ export default {
     &__legal {
       display: grid;
       grid-template-columns: 1200px;
-      padding: var(--f-gutter);
       background-color: var(--color-neutral-02);
       justify-content: center;
       @include respond-to("<=l") {

@@ -82,6 +82,7 @@ export default {
     &.SignUp{
       background-color: var(--color-primary-fashion-fuchsia);
       color: var(--color-neutral-10);
+      height: 40px;
 
       &:hover {
         color: var(--color-neutral-10);

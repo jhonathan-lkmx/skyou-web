@@ -1,57 +1,51 @@
 <template>
-  <nuxt-link :to="url" class="products__card__content">
-    <img :src="require(`../static/img/${image}`)" :alt="image">
-    <div class="products__card__title-content">
-      <h3>{{title}}</h3>
-      <h4>{{subtitle}}</h4>
+  <div class="list">
+    <div class="list__product" v-for="product in listProducts" :key="product.id">
+      <div class="list__product__img">
+        <img :src="product.image" class="img" :alt="product.name">
+      </div>
+      <div class="list__product__item">
+        <nuxt-link :to="`/single-product/${product.id}`" class="title"> {{product.name}} </nuxt-link>
+      </div>
     </div>
-  </nuxt-link>
+  </div>
 </template>
 
 <script>
 export default {
   props: {
-    image: {
-      type: String,
-      required: false,
-    },
-    title: {
-      type: String,
-      requied: false,
-    },
-    url: {
-      type: String,
-      required: false,
-    },
-    subtitle: {
-      type: String,
-      required: false,
-    }
+    listProducts: ''
   }
 }
 </script>
 
-<style lang="scss">
-  .products {
-    &__card {
-      &__content {
-        display: grid;
-        justify-content: center;
-        gap: var(--f-gutter);
-        text-align: center;
-        text-decoration: none;
-        p, h3 {
-          margin-bottom: 0;
-        }
+<style lang="scss" scope>
+
+.list{
+  &__product{
+    &__img{
+      width: 100%;
+      height: 80%;
+
+      .img{
+        width: 100%;
+        height: 100%;
       }
-      &__title-content {
-        display: grid;
-        gap: 4px;
-         h4 {
-           color: var(--color-neutral-04);
-           margin-bottom: 0;
-         }
+    }
+
+    &__item{
+      width: 100%;
+      height: 20%;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+
+      .title{
+        font-size: 20px;
       }
     }
   }
+  
+}
+
 </style>

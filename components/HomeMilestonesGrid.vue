@@ -142,15 +142,15 @@ export default {
         align-content: space-between;
         .dot {
         
-        width: 10px;
-        height: 10px;
-        left: 0px;
-        background: var(--color-neutral-10);
-        border: 1px solid var(--color-primary-fashion-fuchsia);
-        box-sizing: border-box;
-        border-radius: 50%;
-        z-index: 40;
-      }
+          width: 10px;
+          height: 10px;
+          left: 0px;
+          background: var(--color-neutral-10);
+          border: 1px solid var(--color-primary-fashion-fuchsia);
+          box-sizing: border-box;
+          border-radius: 50%;
+          z-index: 40;
+        }
       }
       height: 100%;
     }
