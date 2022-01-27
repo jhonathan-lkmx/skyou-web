@@ -2,86 +2,86 @@
     {
         "id": 1,
         "name": "Shirt",
-        "image":"./img/hoodies-sweatshirts-10.jpg"
+        "image":"../../img/hoodies-sweatshirts-10.jpg"
     },
     {
         "id": 2,
         "name": "Bag",
-        "image":"./img/asi-ppai-hero.jpg"
+        "image":"../../img/asi-ppai-hero.jpg"
     },
     {
         "id": 3,
         "name": "Beds",
-        "image":"./img/5-ACURACY.jpg"
+        "image":"../../img/5-ACURACY.jpg"
     },
     {
         "id": 4,
         "name": "Phones",
-        "image":"./img/customization-image.png"
+        "image":"../../img/customization-image.png"
     },
     {
         "id": 5,
         "name": "Leggings",
-        "image":"./img/effortless-design.png"
+        "image":"../../img/effortless-design.png"
     },
     {
         "id": 6,
         "name": "Hoodie",
-        "image":"./img/flexibility-image.png"
+        "image":"../../img/flexibility-image.png"
     },
     {
         "id": 7,
         "name": "Sleeve",
-        "image":"./img/homepage-services-1.jpg"
+        "image":"../../img/homepage-services-1.jpg"
     },
     {
         "id": 8,
         "name": "Men",
-        "image":"./img/products-home-1.jpg"
+        "image":"../../img/products-home-1.jpg"
     },
     {
         "id": 9,
         "name": "Sunglasses",
-        "image":"./img/hoodies-sweatshirts-1.jpg"
+        "image":"../../img/hoodies-sweatshirts-1.jpg"
     },
     {
         "id": 10,
         "name": "KIDS SHIRT",
-        "image":"./img/hoodies-sweatshirts-2.jpg"
+        "image":"../../img/hoodies-sweatshirts-2.jpg"
     },
     {
         "id": 11,
         "name": "SPECIAL",
-        "image":"./img/hoodies-sweatshirts-3.jpg"
+        "image":"../../img/hoodies-sweatshirts-3.jpg"
     },
     {
         "id": 12,
         "name": "Lunch Box",
-        "image":"./img/hoodies-sweatshirts-4.jpg"
+        "image":"../../img/hoodies-sweatshirts-4.jpg"
     },
     {
         "id": 13,
         "name": "poster",
-        "image":"./img/hoodies-sweatshirts-5.jpg"
+        "image":"../../img/hoodies-sweatshirts-5.jpg"
     },
     {
         "id": 14,
         "name": "Swacthes",
-        "image":"./img/hoodies-sweatshirts-6.jpg"
+        "image":"../../img/hoodies-sweatshirts-6.jpg"
     },
     {
         "id": 15,
         "name": "Slip-on",
-        "image":"./img/cut-sew.png"
+        "image":"../../img/cut-sew.png"
     },
     {
         "id": 16,
         "name": "Pencil Case",
-        "image":"./img/hoodies-sweatshirts-8.jpg"
+        "image":"../../img/hoodies-sweatshirts-8.jpg"
     },
     {
         "id": 17,
         "name": "Shoes",
-        "image":"./img/hoodies-sweatshirts-9.jpg"
+        "image":"../../img/hoodies-sweatshirts-9.jpg"
     }
 ]
