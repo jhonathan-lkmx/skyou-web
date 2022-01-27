@@ -200,7 +200,7 @@ export default {
 
 .flui-header {
   display: grid;
-  grid-template-columns: 240px 1fr 240px 20px;
+  grid-template-columns: 240px 1fr 240px;
   @include respond-to('<=l') {
     grid-template-columns: 1fr auto 1fr;
   }
@@ -332,11 +332,10 @@ export default {
     border-radius: 5px;
     width: 150px;
     margin-top: 10px;
+    margin-left: 30%;
     @include respond-to('<=m'){
-      margin-left: 35%;
       width: 100px;
       @include respond-to('<=s'){
-        margin-left: 40%;
         width: 75px;
       }
     }
@@ -378,8 +377,10 @@ export default {
     width: 480px;
     @include respond-to('<=m'){
       width: 90%;
+      padding: 15px 36px 36px;
       @include respond-to('<=s'){
         width: 80%;
+        padding: 10px 24px 24px;
       }
     }
     height: auto;   
