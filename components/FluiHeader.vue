@@ -335,8 +335,10 @@ export default {
     margin-left: 30%;
     @include respond-to('<=m'){
       margin-left: 35%;
+      width: 100px;
       @include respond-to('<=s'){
         margin-left: 40%;
+        width: 75px;
       }
     }
     

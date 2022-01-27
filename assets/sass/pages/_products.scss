@@ -18,14 +18,6 @@
       &__info{
         padding-top: var(--column-space-l);
         padding-bottom: var(--column-space-l);
-        .content {
-          .box {
-            background-color: var(--color-neutral-09);
-            border-radius: 4px;
-            padding: var(--f-gutter-l);
-            height: auto;
-          }
-        }
       }
     }
   }
