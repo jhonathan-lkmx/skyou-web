@@ -1,0 +1,133 @@
+{
+    "productId": 81,
+    "productName": "Men's T-Shirt (SJ)",
+    "productCode": "T300",
+    "productDescription": "<p dir=\"ltr\">Super soft garment washed single jersey gives this shirt a light and soft feel. &nbsp;A lay flat collar with a touch of spandex ensures this shirt will always look great no matter how many times you pull it on and off. &nbsp;Double needle construction and a standard fit make this the ultimate tee.</p>\n<p>3.2 oz. single jersey, 100% cotton</p>\n<p dir=\"ltr\">Lay flat collar</p>\n<p><span id=\"docs-internal-guid-90b65b7f-107a-4fa9-d664-b37f65158d3a\">Double needle construction</span></p>",
+    "productCategory": "Shirt",
+    "priceType": {
+        "msrpPrice": 24,
+        "marketPrice": 18.00,
+        "partnerPrice": 14.4,
+        "wholesalePrice": 12.0,
+        "active": false,
+        "priceTiers": []
+    },
+    "priceTiers": [
+        {
+            "price": 19.77,
+            "unit": 1
+        },
+        {
+            "price": 18.78,
+            "unit": 10
+        },
+        {
+            "price": 17.84,
+            "unit": 25
+        },
+        {
+            "price": 16.95,
+            "unit": 50
+        },
+        {
+            "price": 16.61,
+            "unit": 100
+        },
+        {
+            "price": 16.28,
+            "unit": 250
+        },
+        {
+            "price": 15.95,
+            "unit": 500
+        },
+        {
+            "price": 15.63,
+            "unit": 1000
+        },
+        {
+            "price": 15.32,
+            "unit": 2500
+        },
+        {
+            "price": 15.02,
+            "unit": 5000
+        },
+        {
+            "price": 14.87,
+            "unit": 10000
+        }
+    ],
+    "sizes": [
+        {
+            "size": "XS",
+            "priceTiers": []
+        },
+        {
+            "size": "S",
+            "priceTiers": []
+        },
+        {
+            "size": "M",
+            "priceTiers": []
+        },
+        {
+            "size": "L",
+            "priceTiers": []
+        },
+        {
+            "size": "XL",
+            "priceTiers": []
+        },
+        {
+            "size": "3XL",
+            "priceTiers": []
+        },
+        {
+            "size": "2XL",
+            "priceTiers": []
+        },
+        {
+            "size": "5XL",
+            "priceTiers": []
+        }
+    ],
+    "components": [
+        {
+            "name": "Stitching",
+            "details": []
+        },
+        {
+            "name": "Artist label",
+            "details": []
+        },
+        {
+            "name": "Collar",
+            "details": []
+        },
+        {
+            "name": "Sleeve - Left",
+            "details": []
+        },
+        {
+            "name": "Sleeve - Right",
+            "details": []
+        },
+        {
+            "name": "Body - Back",
+            "details": []
+        },
+        {
+            "name": "Body - Front",
+            "details": []
+        }
+    ],
+    "materials": [],
+    "thumbImages": [
+        "https://s3.amazonaws.com/alkheme_ecomqa/cs/prodimg/2016/04_20/8463/t/1_5640dca0.png",
+        "https://s3.amazonaws.com/alkheme_ecomqa/cs/prodimg/2016/04_20/8464/t/1_075969c0.png",
+        "https://s3.amazonaws.com/alkheme_ecomqa/cs/prodimg/2016/08_09/8651/t/1_c3382b6e.png",
+        "https://s3.amazonaws.com/alkheme_ecomqa/cs/prodimg/2016/06_28/8605/t/1_51c4901a.png",
+        "https://s3.amazonaws.com/alkheme_ecomqa/cs/prodimg/2016/05_15/8493/t/1_557e576e.png"
+    ]
+}
