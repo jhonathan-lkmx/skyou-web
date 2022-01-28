@@ -140,12 +140,16 @@ export default{
                         text-decoration: none;
                         color: var(--color-neutral-01);
                         @include respond-to('<=m'){
+                            font-family: Comfortaa;
+                            font-style: normal;
                             font-size: 25px;
                             font-size: 300;
 
                             @include respond-to('<=s'){
+                                font-family: Comfortaa;
+                                font-style: normal;
+                                font-weight: bold;
                                 font-size: 20px;
-                                font-weight: 200;
                             }
                         }
                     }
