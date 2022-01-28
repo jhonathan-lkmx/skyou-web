@@ -283,6 +283,7 @@ body {
             }
           }
           &__chevron {
+            margin-top: -5px;
             transition: var(--flui-header-nav-transition);
             @include respond-to("<=m") {
               display: none;
@@ -299,15 +300,12 @@ body {
         }
         &__dropdown {
           position: absolute;
-          padding-left: 0;
           top: var(--flui-header-nav-top-dropdown-top-position);
           background-color: var(--flui-header-nav-dropdown-background-color);
           border-radius: var(--flui-header-nav-dropdown-border-radius);
           z-index: var(--flui-header-nav-dropdown-zindex);
           box-shadow: var(--flui-header-nav-dropdown-box-shadow);
           display: none;
-          top: 56px;
-          left: 0;
           @include respond-to("<=m") {
             display: grid;
             position: relative;

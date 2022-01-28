@@ -123,6 +123,12 @@ export default{
 
         &__items{
             width: 60%;
+            @include respond-to('<=m'){
+                width: 70%;
+                @include respond-to('<=s'){
+                    width: 80%;
+                }
+            }
 
             .card{
                 display: grid;

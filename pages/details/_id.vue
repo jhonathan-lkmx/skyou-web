@@ -3,7 +3,7 @@
        <div class="products__header">
             <div class="products__header__title">
                 <div class="router">
-                    <a href="/products" class="router__breadCrumb"> products 
+                    <a href="/products" class="router__breadCrumb"> Products 
                         <svg class="flui-breadcrumb__link__chevron" width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5.33325 4.27618L6.27606 3.33337L10.9901 8.04742L6.27606 12.7615L5.33325 11.8187L9.10449 8.04742L5.33325 4.27618Z" fill="#5E7187"/>
                         </svg>
@@ -53,7 +53,7 @@
                     </div>
                 </div>
                 <div class="message">
-                    <p class="message__showMessage" @click.prevent="statusMessages" v-show="!statusMessage">Show bult prices</p>
+                    <p class="message__showMessage" @click.prevent="statusMessages" v-show="!statusMessage">Show bulk prices</p>
                     <p class="message__hideMessage" @click.prevent="statusMessages" v-show="statusMessage">Hide bulk prices</p>
                 </div>
             </div>
@@ -218,7 +218,7 @@ export default{
             }
 
             .detailsProduc{
-                width: 80%;
+                width: 100%;
                 &__details{
                     font-size: 16px;
                 }
@@ -347,14 +347,19 @@ export default{
             }
 
             .message{
-                height: 50px;
+                height: 35px;
+                margin-top: 10px;
                 display: flex;
                 justify-content: center;
                 flex-wrap: wrap; 
                 align-content: center;
                 &__hideMessage, &__showMessage{
                     color: var(--color-primary-fashion-fuchsia);
-                    font-size: 16px;    
+                    font-family: Roboto;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 18px;
                 }
             }
             
