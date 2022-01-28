@@ -49,7 +49,9 @@ export default{
     flex-direction: column;
 
     &__header{
+        margin-top: 20px;
         width: 100%;
+        margin-bottom: -15px;
         @include respond-to('<=m'){
             margin-left: 8%;
             width: 80%;
