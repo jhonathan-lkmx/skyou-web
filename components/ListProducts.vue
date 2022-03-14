@@ -3,13 +3,15 @@
         <div class="container__header">
             <div class="container__header__title">
                 <div class="router">
-                    <a href="/products" class="router__breadCrumb__textProduct"> Products 
-                    </a>
+                    <a href="/products" class="router__breadCrumb__textProduct"> Products </a>
                 </div>
             </div>
         </div>
         <div class="container__products">
-            <card-products class="container__products__items" :listProducts="listProducts"/>
+            <div class="container__products__group" v-for="group in listProducts" :key="group.id">
+                <h1>{{group.name}}</h1>
+                <card-products class="container__products__items" :listProducts="group.categories"/>
+            </div>
         </div>
     </div>
 </template>
@@ -23,7 +25,8 @@ export default{
     },
     data(){
         return{
-            listProducts:''
+            listProducts:'',
+            categoryMap: null
         }
     },
     mounted(){
@@ -32,7 +35,24 @@ export default{
     methods:{
         async loadCategories() {
             var categories = await this.$csapi().categories.list();
-            this.listProducts=categories;
+
+            var categoryMap = {};
+            categories.forEach(cat => {
+                let key = cat.group ? cat.group.id: 'Others';
+
+                if(!categoryMap[key]) {
+                    categoryMap[key] = {
+                        id: cat.group ? cat.group.id : null,
+                        name: cat.group ? cat.group.name: 'Others',
+                        order: cat.group ? cat.displayOrder: null,
+                        categories: []
+                    };
+                }
+
+                categoryMap[key].categories.push(cat);
+            });
+
+            this.listProducts = categoryMap;
         }
     },
     asyncData({ $csapi }) {
@@ -109,9 +129,7 @@ export default{
         }
     }
 
-    &__products{ 
-        display: flex;
-        justify-content: center;
+    &__products { 
 
         @include respond-to('<=m'){
             width: 80%;
@@ -120,6 +138,15 @@ export default{
             @include respond-to('<=s'){
                 margin-left: 25px;
                 width: 90%;
+            }
+        }
+
+
+        &__group {
+            h1 {
+                margin-top: 4rem;
+                margin-bottom: 1rem;
+                color: #EE008F;
             }
         }
 

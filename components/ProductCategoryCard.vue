@@ -1,12 +1,15 @@
 <template>
   <div class="list">
-    <div class="list__product" v-for="product in listProductCategory.products" :key="product.id">
-      <div class="list__product__img">
-        <img :src="product.image" class="img" :alt="product.name">
-      </div>
-      <div class="list__product__item">
-        <nuxt-link :to="`/details/${product.id}`" class="title"> {{product.name}} </nuxt-link>
-      </div>
+    <div class="list__product" v-for="product in listProductCategory" :key="product.id">
+      <nuxt-link :to="`/details/${product.id}`" class="list__product__link">
+        <div class="list__product__img">
+          <img :src="product.image" class="img" :alt="product.name" v-if="product.image">
+          <img src="../assets/img/image-placeholder.png" class="img" :alt="product.name" v-else>
+        </div>
+        <div class="list__product__item">
+          <span class="title"> {{product.name}} </span>
+        </div>
+      </nuxt-link>
     </div>
   </div>
 </template>
@@ -24,6 +27,11 @@ export default {
 .list{
   &__product{
     margin-bottom: 20px;
+    
+    &__link {
+      text-decoration: none;
+    }
+
     &__img{
         width: 100%;
         height: 80%;
@@ -47,7 +55,6 @@ export default {
           font-weight: bold;
           font-size: 24px;
           line-height: 130%;
-          text-decoration: none;
           color: var(--color-neutral-01);
           margin-top: 10px;
         }
