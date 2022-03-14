@@ -8,13 +8,16 @@
                             <path d="M5.33325 4.27618L6.27606 3.33337L10.9901 8.04742L6.27606 12.7615L5.33325 11.8187L9.10449 8.04742L5.33325 4.27618Z" fill="#5E7187"/>
                         </svg>
                     </a>
-                    <a class="router__breadCrumb__textProduct"> {{listProductCategory.name}}</a>
+                    <a class="router__breadCrumb__textProduct" v-if="category"> {{category.name}}</a>
                 </div>
             </div>
         </div>
-        <div class="products__categorys">
-            <div class="products__categorys__items">
-                <card-products class="card" :listProductCategory="listProductCategory"/>
+        <div class="products__categories">
+            <div class="products__categories__items">
+                <div class="products__categories__items__gender" v-for="category in listProductCategory" :key="category.id">
+                    <h1>{{category.name}}</h1>
+                    <card-products class="card" :listProductCategory="category.products"/>
+                </div>
             </div>
         </div>
     </div>
@@ -30,6 +33,7 @@ export default{
     data(){
         return{
             categoryId: this.$route.params.id,
+            category: null,
             listProductCategory: ''
         }
     },
@@ -39,8 +43,25 @@ export default{
     methods:{
         async getCategoryId(){
             var id = this.categoryId
-            var products = await this.$csapi().products.getByCategoryId(id);
-            this.listProductCategory = products
+            var category = await this.$csapi().products.getByCategoryId(id);
+            this.category = category;
+
+            var productMap = {};
+            category.products.forEach(prod => {
+                let key = prod.genderId ? prod.genderId: 'Others';
+
+                if(!productMap[key]) {
+                    productMap[key] = {
+                        id: prod.genderId,
+                        name: prod.genderName ? prod.genderName: 'Other',
+                        products: []
+                    };
+                }
+
+                productMap[key].products.push(prod);
+            });
+
+            this.listProductCategory = productMap;
         }
     },
     asyncData({ $csapi }) {
@@ -54,6 +75,7 @@ export default{
 .products{ 
     height: auto;
     display: inline;
+    padding-bottom: 120px;
 
     &__header{
         width: 100%;
@@ -115,7 +137,7 @@ export default{
         }
     }
 
-    &__categorys{
+    &__categories{
         width: 100%;
         display: flex;
         justify-content: center;
@@ -129,7 +151,14 @@ export default{
                     width: 80%;
                 }
             }
-
+            &__gender {
+                h1 {
+                    text-align: left;
+                    color: #EE008F;
+                    margin-top: 4rem;
+                    margin-bottom: 1rem;
+                }
+            }
             .card{
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr 1fr;

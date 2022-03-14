@@ -1,12 +1,15 @@
 <template>
   <div class="list">
     <div class="list__product" v-for="product in listProducts" :key="product.id">
-      <div class="list__product__img">
-        <img :src="product.image" class="img" :alt="product.name">
-      </div>
-      <div class="list__product__item">
-        <nuxt-link :to="`/single-product/${product.id}`" class="title"> {{product.name}} </nuxt-link>
-      </div>
+      <nuxt-link :to="`/single-product/${product.id}`" class="list__product__link">
+        <div class="list__product__img">
+          <img :src="product.image" class="img" :alt="product.name" v-if="product.image">
+          <img src="../assets/img/image-placeholder.png" class="img" :alt="product.name" v-else>
+        </div>
+        <div class="list__product__item">
+          <span class="title"> {{product.name}}</span>
+        </div>
+      </nuxt-link>
     </div>
   </div>
 </template>
@@ -23,6 +26,10 @@ export default {
 
 .list{
   &__product{
+    &__link {
+      text-decoration: none;
+    }
+
     &__img{
       width: 100%;
       height: 80%;

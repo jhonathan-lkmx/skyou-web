@@ -27,7 +27,7 @@
       <flui-header-nav></flui-header-nav>
     </nav>
 
-    <button @click="showModal = true" class="buttonLogin" aria-label="actions" v-if="!showSignOff">
+    <button @click="showModal = true" class="buttonLogin" aria-label="actions" v-if="!showSignOff && false">
       Login
     </button>
 
