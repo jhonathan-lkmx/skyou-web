@@ -27,22 +27,77 @@
       <flui-header-nav></flui-header-nav>
     </nav>
 
-    <!-- Actions -->
-    <nav class="flui-header__actions" aria-label="actions">
-      <a v-for="(action, index) in actions" :key="index" :href="action.to">
-        <slot name="headerActions">{{ action.title }}</slot>
-      </a>
-    </nav>
+    <button @click="showModal = true" class="buttonLogin" aria-label="actions" v-if="!showSignOff && false">
+      Login
+    </button>
+
+    <button @click="signOff" class="buttonSignIn" aria-label="actions" v-if="showSignOff">
+      Sign Off
+    </button>
+
+    <transition name="fade">
+      <div class="modal-overlay" v-if="showModal"></div>
+    </transition>
+
+    <transition name="fade">
+      <div class="modal" v-if="showModal">
+        <div @click="showModal = false" class="modal__closeModal">
+          <img src="../assets/img/icon-close.png" alt="">
+        </div>
+        <div class="modal__header">
+          <div class="header">
+            <p class="header__textLogin">Login</p>
+          </div>
+          <div class="imgLogo">
+            <img src="../assets/img/logo.png" width="150px" height="44px" alt="">
+          </div>
+
+        </div>
+        <div class="modal__form">
+          <div class="modal__form__control">
+            <label class="textLabel">Email address</label>
+            <input class="formInput" type="text" placeholder="user@gmail.com" v-model="command.email"> 
+          </div>
+          <div class="modal__form__control">
+            <label class="textLabel">Password</label>
+            <div class="input-wrapper">
+              <input class="formInput" :type="inputType" placeholder="*********" v-model="command.password"> 
+              <img src="../assets/img/eye.svg" v-show="!showPassword" class="input-wrapper__icon" @click="toogleShowPassword">
+              <img src="../assets/img/eye-off.svg" v-show="showPassword" class="input-wrapper__icon" @click="toogleShowPassword">
+            </div>
+          </div>
+          <p class="modal__form__error" v-show="showTextError"> The username or password you have entered is incorrect </p>
+        </div>
+        <div class="modal__login">
+          <button class="modal__login__textLogin" :disabled="isFormDisabled" @click="signIn()">
+            Sign In
+          </button>
+        </div>
+      </div>
+    </transition>
 
   </header>
 </template>
 
 <script>
+import btnLogin from './Btn.vue'
+
 export default {
+  components:{
+    btnLogin
+  },
   data: function () {
     return {
       isNavOpen: false,
-    };
+      showModal: false,
+      command:{
+        email: null,
+        password: null
+      },
+      showPassword:false,
+      showSignOff: false,
+      showTextError: false
+    }
   },
   props: {
     mode: {
@@ -101,12 +156,31 @@ export default {
         navIsClosed();
       }
     },
+    toogleShowPassword(){
+      this.showPassword = !this.showPassword
+    },
+    showButtomSignIn(){
+      this.showSignOff = !this.showSignOff
+    },
+    signIn(){
+      this.showButtomSignIn();
+      this.showModal = false;
+    },
+    signOff(){
+      this.showSignOff = !this.showSignOff
+    }
   },
   computed: {
     initMenu() {
       return {
         'navIsOpen': this.isNavOpen,
       }
+    },
+    inputType(){
+      return this.showPassword ? 'text' : 'password';
+    },
+    isFormDisabled(){
+      return this.command.email == null || this.command.password == null
     }
   },
 };
@@ -135,8 +209,6 @@ export default {
   z-index: 10;
   background: var(--flui-header-background-color);
   padding: 0;
-  min-height: var(--f-gutter-xl);
-  height: var(--flui-header-height);
   color: var(--flui-header-text-color);
   position: relative;
 
@@ -162,11 +234,7 @@ export default {
       justify-items: start;
       grid-template-columns: 1fr;
       grid-auto-flow: row;
-
-      /* height: var(--f-gutter-xl);
-      width: var(--f-gutter-xl); */
       background-color: transparent;
-
       padding: 20px var(--f-gutter);
     }
     &:hover {
@@ -212,17 +280,7 @@ export default {
     grid-auto-flow: column;
     justify-content: center;
     height: 100%;
-    &:not(.actions) {
-      /* a {
-        height: auto;
-        padding: 23px var(--f-gutter);
-        @include respond-to('<=m') {
-          width: 100%;
-          text-align: center;
-          padding: var(--f-gutter);
-        }
-      } */
-    }
+
     @include respond-to('<=m') {
       display: none;
       align-content: start;
@@ -260,15 +318,176 @@ export default {
     }
   }
   &__actions {
-    display: grid;
-    gap: var(--f-gutter);
-    align-items: center;
+    display: flex;
     justify-content: center;
-    justify-items: center;
-    grid-template-columns: 1fr;
-    grid-auto-flow: column;
     a {
       text-decoration: none;
+    }
+  }
+
+  .buttonLogin{
+    background-color: white;
+    border: 1px solid var(--color-primary-fashion-fuchsia);
+    color: var(--color-neutral-01);
+    border-radius: 5px;
+    width: 150px;
+    margin-top: 10px;
+    margin-left: 30%;
+    @include respond-to('<=m'){
+      width: 100px;
+      @include respond-to('<=s'){
+        width: 75px;
+      }
+    }
+    
+  }
+
+  .buttonSignIn{
+    background-color: var(--color-primary-fashion-fuchsia);
+    color: white;
+    border-radius: 5px;
+    width: 150px;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-left: 30%;
+    @include respond-to('<=m'){
+      margin-left: 35%;
+      @include respond-to('<=s'){
+        margin-left: 40%;
+      }
+    }
+  }
+
+  .modal-overlay{
+    position: fixed;
+    position: device-fixed;
+    background-color: rgba(#1E292F, 0.7);
+    width: 100%;
+    height: 200%;
+    left: 0;
+  }
+
+  .modal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 48px 48px;
+    position: fixed;
+    width: 480px;
+    @include respond-to('<=m'){
+      width: 90%;
+      padding: 15px 36px 36px;
+      @include respond-to('<=s'){
+        width: 80%;
+        padding: 10px 24px 24px;
+      }
+    }
+    height: auto;   
+    background: #FFFFFF;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-neutral-10);
+
+    &__closeModal{
+      width: 100%;
+      display: flex;
+      justify-content: right;
+      margin-top: 14px;
+      margin-bottom: 20px;
+    }
+
+    &__header{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+
+      .header{
+        text-align: left;
+        display: flex;
+        align-items: center;
+
+        &__textLogin{
+          font-family: Comfortaa;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 30px;
+          line-height: 130%;
+          color: var(--color-primary-fashion-fuchsia);
+        }
+      }
+
+      .imgLogo{
+        display: flex;
+        justify-content: right;
+      }
+    }
+
+    &__form{
+      width: 100%;
+
+      &__error{
+        //styleName: small/normal;
+        font-family: Roboto;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 14px;
+        letter-spacing: 0px;
+        text-align: left;
+        color: red;
+      }
+
+      &__control{
+        margin-top: 30px;
+        
+        .formInput{
+          width: 100%;
+          margin-bottom: 10px;
+          height: 45px;
+          border-radius: 5px;
+        }
+        
+        .input-wrapper {
+          position: relative;
+
+          &__icon {
+            color: #191919;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            left: 12px;
+            top: 50%;
+            left: unset;
+            right: 12px;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+
+    &__login{
+      width: 100%;
+      height: 50px;
+      background-color: var(--color-primary-fashion-fuchsia);
+      display: flex;
+      justify-content: center;
+      border-radius: 5px;
+      margin-top: 15px;
+
+      button {
+        text-transform: uppercase;
+        border-radius: 15px;
+        text-align: center;
+        background-color: var(--blue-light);
+        color: white;
+        cursor: pointer;
+        margin-top: 5px;
+      }
     }
   }
 }

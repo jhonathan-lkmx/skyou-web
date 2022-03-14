@@ -2,7 +2,6 @@
   &__hero {
     padding-top: var(--column-space-l);
     padding-bottom: var(--column-space-l);
-    background-color: var(--color-primary-fashion-fuchsia);
     &__info {
       .content {
         display: grid;
@@ -14,18 +13,18 @@
             margin-bottom: 0;
           }
           h3, p {
-            color: var(--color-neutral-07);
+            color: var(--color-neutral-03);
           }
           h1 {
-            color: var(--color-neutral-10);
+            color: var(--color-primary-fashion-fuchsia);
             @include respond-to("<=m") {
               font-size: 34px;
               line-height: 40.8px;
             }
           }
           p:nth-of-type(1) {
-            color: var(--color-neutral-10);
-            font-weight: 500;
+            color: var(--color-neutral-03);
+            // font-weight: 500;
           }
           strong {
             font-weight: bolder;
@@ -49,6 +48,7 @@
   &__info {
     padding-top: var(--column-space-xxl);
     padding-bottom: var(--column-space-xxl);
+    background-color: var(--color-neutral-08);
     @include respond-to("<=m") {
       padding-top: var(--column-space-l);
       padding-bottom: var(--column-space-l);
@@ -78,7 +78,7 @@
         h2 {
           margin-bottom: 0;
           height: 41px;
-          color: var(--color-primary-cyan-process);
+          color: var(--color-primary-fashion-fuchsia);
         }
       }
     }
@@ -202,10 +202,6 @@
     }
     &__time-line {
       background: var(--color-neutral-10);
-      .content {
-        .box {
-        }
-      }
     }    
   }
 }

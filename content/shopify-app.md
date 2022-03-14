@@ -9,9 +9,9 @@ description: Sell through Shopify with no inventory page
 
 # Shopify App
 
-### Sell through Shopify with no inventory page
+### Sell through Shopify with no inventory
 
-When you sell through Shopify you don’t have to carry any inventory, **SKYOU produces each order as they are placed**, and ships to your end customer on your behalf.
+When you sell through using SKYOU’s Shopify App, you don’t have to carry any inventory. **SKYOU produces each order as they are placed** and ships to your end-customer on your behalf.
 
 [Install Shopify App](https://apps.shopify.com/skyou)
 
@@ -84,7 +84,7 @@ You don’t have to carry any inventory, SKYOU produces each order as they are p
 
 ![package](./img/icon-package-order.svg)
 
-### 3. Your orders are sent
+### 4. Your orders are produced and shipped
 
 Our app automatically sends the order to our factory, where we manufacture and fulfill to your end customer.
 
@@ -166,6 +166,8 @@ Our app automatically sends the order to our factory, where we manufacture and f
 <template v-slot:image>
 
 ![shirt](./img/shopify-app-4.jpg)
+
+<btn type="secondary" url="/products" display="full">View products</btn>
 
 </template>
 

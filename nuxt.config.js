@@ -30,7 +30,8 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/flare',
-    '~/plugins/cs-api.js'
+    '~/plugins/cs-api.js',
+    '~/filters/filters.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -56,5 +57,10 @@ export default {
       Roboto: [300, 500],
       'Comfortaa': [300, 400, 500, 600, 700],
     }
-  }  
+  },
+
+  publicRuntimeConfig: {
+    apiHost: process.env.API_HOST,
+    product3dTool: process.env.PRODUCT_3D_TOOL,
+  },
 }

@@ -2,27 +2,23 @@
   &__title {
     padding-top: var(--column-space-l);
     padding-bottom: var(--column-space-l);
-    gap: var(--f-gutter);
-  }
-  &__subtitle {
-    padding-top: var(--column-space-l);
-    background-color: var(--color-neutral-10);
-    .content {
-      .box {
-        h2 {
-          margin-bottom: 0;
-          color: var(--color-neutral-03);
-          height: 41px;
-          @include respond-to("<=m") {
-            height: auto;
-          }
+    &__breadcrumb {
+      .content {
+        .box {
+          padding-bottom: 0;
         }
       }
     }
   }
-
-  &__categories {
-    padding-bottom: var(--column-space-l);
-    background-color: var(--color-neutral-10);
+  &__items {
+    &__item{
+      background-color: var(--color-neutral-10);
+      padding-bottom: 120px;
+      
+      &__info{
+        padding-top: var(--column-space-l);
+        padding-bottom: var(--column-space-l);
+      }
+    }
   }
 }

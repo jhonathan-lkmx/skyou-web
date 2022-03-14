@@ -11,7 +11,7 @@ description: See exactly what your product will look like, in 3D, before it's ma
 
 ### See exactly what your product will look like, in 3D, before it's made!
 
-SKYOU has developed and patented an industry leading browser based 3D Design Tool that is both simple and powerful.
+SKYOU has developed and patented an industry-leading browser based 3D Design Tool that is both simple and powerful.
 
 </block>
 
@@ -69,7 +69,7 @@ SKYOU has developed and patented an industry leading browser based 3D Design Too
 
 <template v-slot:image>
 
-![3d design tool 2 image](./img/3d-design-tool-2.jpg)
+![3d design tool 2 image](./img/5-ACURACY.jpg)
 
 </template>
 
@@ -113,11 +113,11 @@ SKYOU has developed and patented an industry leading browser based 3D Design Too
 
 <block>
 
-<card title="Text Styling" subtitle="Custom text inputs, let your customer add their text to your designs. You control the fonts, colors, and where text can be entered" />
+<card title="Custom Text" subtitle="Custom text inputs, let your customer add their text to your designs. You control the fonts, colors, and where text can be entered" />
 
 <template v-slot:image>
 
-![3d design tool 6 image](./img/3d-design-tool-6.jpg)
+![3d design tool 6 image](./img/6-CUSTOM-TEXT.png)
 
 </template>
 

@@ -112,7 +112,7 @@
       .content {
         .box {
           display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-columns: 1fr 1fr;
           padding: 0 var(--f-gutter-l);
           gap: var(--f-gutter-l);
           @include respond-to("<=m") {

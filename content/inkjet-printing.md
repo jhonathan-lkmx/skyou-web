@@ -57,11 +57,11 @@ We have over 20 years of experience in digital printing and decoration technique
 
 ## Reactive Inkjet
 
-**Colors come out bright and bold**. The fabric also has **zero hand feel**, and because of the dyed nature, **it never cracks, peels, or fades** with excellent wash fastness.
+**Colors come out bright and bold** with **zero hand feel**. The ink is chemically bonded to the cellulose fabric and will **never crack, peel or fade**. Excellent wash fastness, far superior to POD pigment based inks.
 
 ![reactive-inkjet image](./img/inkjet-printing-reactive.jpg)
 
-Reactive inkjet uses the same dye that makes your black t-shirt black, in a highly refined form. This dye solution is printed through an inkjet head directly to the pre-treated surface of the cotton fabric and the cotton fabric is dyed by exposing the printed fabric to steam, and then the excess dye is washed out during the garment washing cycle. Finally the fabric is stentered to avoid any distortion and to heat set the fabric.
+Reactive inkjet uses the same dye that makes your black t-shirt black, in a highly refined form. This dye solution is printed through an inkjet head directly to the pre-treated surface of the cotton fabric. The cotton fabric is dyed by exposing the printed fabric to steam, and then the excess dye is washed out during the garment washing cycle. Finally the fabric is stentered to avoid any distortion and to heat set the fabric.
 
 This is the **most premium (and difficult) printing process** for natural fibers like cotton or rayon.
 
@@ -73,11 +73,11 @@ We use reactive inkjet printing for all of our cotton/cellulose-based fabrics.
 
 ## Sublimation
 
-Sublimation has a wide color gamut, is great **for bold and bright prints,** has **zero hand feel, and never cracks, peels, or fades.**
+Sublimation has a wide color gamut, is great for **bold and bright prints**, has **zero hand feel, and never cracks, peels, or fades**.
 
 ![sublimation image](./img/inkjet-printing-sublimation.jpg)
 
-Sublimation inks are printed from an inkjet head onto a roll of transfer paper. The paper is then placed on top of the fabric while heat and pressure are applied. The ink turns into a gas and dyes to the fibers permanently. 
+Sublimation inks are printed from an inkjet head onto a roll of transfer paper. The paper is then placed on top of the fabric while heat and pressure are applied. The ink turns into a gas and dyes the fibers of the fabric permanently. 
 
 We use sublimation for all of our polyester and rPET fabrics.
 
@@ -99,7 +99,7 @@ We use sublimation for all of our polyester and rPET fabrics.
 
 ## Stocking Fabrics
 
-We maintain inventory on the fabrics that correspond to our base catalog offerings. We have extensive relationships with mills. For bulk orders or ongoing projects, we can develop or source fabric needed for your custom project.
+We maintain inventory of the fabrics that correspond to our base catalog offerings. We have extensive relationships with fabric mills. For bulk orders or ongoing projects, we can develop or source the fabric needed for your custom project.
 
 </block>
 
@@ -235,7 +235,7 @@ This fabric has a peached surface and a bit of stretch.  A good alternative to c
 
 <block  id="inkjet-printing__stock__options__image">
 
-![inkjet printing bags image](./img/inkjet-printing-bags.jpg)
+![inkjet printing bags image](./img/3-BAG-AND-TOTES.jpg)
 
 </block>
 

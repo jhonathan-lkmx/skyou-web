@@ -11,13 +11,13 @@ description: Using our expertise in one-off manufacturing, we envisioned bringin
 
 SKYOU is a web-based product platform focused on low/no minimum order quantity retail-quality products.
 
-We bridge the gap between factories and brands with our innovative 3D design tool. We own our own factories in Guangzhou China and Tijuana, Mexico focused on no-moq manufacturing.  
+We bridge the gap between factories and brands with our innovative 3D design tool. We own our own factories in Guangzhou, China and Tijuana, Mexico focused on no-moq manufacturing.  
 
 </block>
 
 <block id="about-us__hero__image-content">
 
-![About us image](./img/about-us-hero.jpg)
+![About us image](/img/about-us-hero.jpg)
 
 </block>
 
@@ -55,7 +55,7 @@ We eliminate the need for minimums with a mastery of **digital printing, laser c
 
 <block>
 
-![Abouts us our story image](./img/about-us-our-story.jpg)
+![Abouts us our story image](/img/about-us-our-story.jpg)
 
 </block>
 
@@ -101,7 +101,7 @@ Prior to founding SKYOU we started the first web-based mass customization compan
 
 <block>
 
-## Our Milestones
+## Milestones
 
 ### Over 20 years of manufacturing experience
 
@@ -159,7 +159,7 @@ Prior to founding SKYOU we started the first web-based mass customization compan
 
 <block>
 
-![image-email](./img/icon-mail--blue.svg)
+![image-email](/img/icon-mail--blue.svg)
 
 sales@skyou.com
 
@@ -167,7 +167,7 @@ sales@skyou.com
 
 <block>
 
-![image-contact-phone](./img/icon-phone--blue.svg)
+![image-contact-phone](/img/icon-phone--blue.svg)
 
 <a href="tel:+1 6197451300">+1 619-745-1300</a>
 
@@ -175,7 +175,7 @@ sales@skyou.com
 
 <block>
 
-![image-location-address](./img/icon-location-address--blue.svg)
+![image-location-address](/img/icon-location-address--blue.svg)
 
 [2364 Paseo de las Americas, Unit 104-1541, San Diego, CA 92154, USA](https://goo.gl/maps/mketr9xo5rWiPiNZ7)
 

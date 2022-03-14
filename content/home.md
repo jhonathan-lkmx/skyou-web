@@ -51,7 +51,7 @@ description: The SKYOU platform services a few different customer groups, select
 
 <template v-slot:grid-image>
 
-![Sell through shopify image](./img/homepage-services-1.jpg)
+![Sell through shopify image](./img/shopify-pic.png)
 
 </template>
 
@@ -79,7 +79,7 @@ Install the **free SKYOU app** through the Shopify marketplace and sell with **n
 
 <template v-slot:grid-image>
 
-![Order in bulk image](./img/homepage-services-2.jpg)
+![Order in bulk image](./img/7-ORDER-IN-BULK.jpg)
 
 </template>
 
@@ -98,34 +98,6 @@ Design your products using our **3D design tool** and **order in bulk for your b
 <template v-slot:grid-btn>
 
 <btn type="secondary" display="full" url="/full-package-for-brands">Learn more</btn>
-
-</template>
-
-</home-our-services-cards>
-
-<home-our-services-cards>
-
-<template v-slot:grid-image>
-
-![ASI/SAGE Distributros](./img/homepage-services-3.jpg)
-
-</template>
-
-<template v-slot:grid-title>
-
-### ASI/SAGE Distributors
-
-</template>
-
-<template v-slot:grid-text>
-
-Let us help design amazing all-over printed products. **Free mockups, samples, and top notch service.**
-
-</template>
-
-<template v-slot:grid-btn>
-
-<btn type="secondary" display="full" url="/asi-ppai">Learn more</btn>
 
 </template>
 
@@ -154,7 +126,7 @@ Let us help design amazing all-over printed products. **Free mockups, samples, a
 
 <template v-slot:icon>
 
-![icon-star](./img/icon-star--yellow.svg)
+![icon-star](./img/icon-star--fuchsia.svg)
 
 </template>
 
@@ -176,7 +148,7 @@ Custom developed patterns and fabrics, innovative digital printing, quality cut 
 
 <template v-slot:icon>
 
-![icon-package](./img/icon-package-order--yellow.svg)
+![icon-package](./img/icon-package-order--fuchsia.svg)
 
 </template>
 
@@ -198,19 +170,19 @@ Order as many units as you need.
 
 <template v-slot:icon>
 
-![icon-tag](./img/icon-tag--yellow.svg)
+![icon-tag](./img/icon-tag--fuchsia.svg)
 
 </template>
 
 <template v-slot:title>
 
-### Full package retail sourcing
+### Full-package Retail Sourcing
 
 </template>
 
 <template v-slot:description>
 
-Woven labels, hangtags, seam tags.
+Woven labels, hang tags, seam tags.
 
 </template>
 
@@ -220,7 +192,7 @@ Woven labels, hangtags, seam tags.
 
 <template v-slot:icon>
 
-![icon-print](./img/icon-print--yellow.svg)
+![icon-print](./img/icon-print--fuchsia.svg)
 
 </template>
 
@@ -242,19 +214,19 @@ All over inkjet printing for cotton, poly, rayon, tencel, vegan leather, and nea
 
 <template v-slot:icon>
 
-![icon-handshake](./img/icon-handshake--yellow.svg)
+![icon-handshake](./img/icon-handshake--fuchsia.svg)
 
 </template>
 
 <template v-slot:title>
 
-### No middlemen
+### No Middlemen
 
 </template>
 
 <template v-slot:description>
 
-We own and operate factories in Guangzhou, China and Tijuana, Mexico.
+We own and operate our own factories in Guangzhou, China and Tijuana, Mexico.
 
 </template>
 
@@ -264,19 +236,19 @@ We own and operate factories in Guangzhou, China and Tijuana, Mexico.
 
 <template v-slot:icon>
 
-![icon-3d-cube](./img/icon-3d-cube--yellow.svg)
+![icon-3d-cube](./img/icon-3d-cube--fuchsia.svg)
 
 </template>
 
 <template v-slot:title>
 
-### 3d design tool
+### 3D Design Tool
 
 </template>
 
 <template v-slot:description>
 
-Our tool is a pixel to inch representation of what we’ll manufacture for you.  No more tech packs, no more confusion
+Our Design Tool is a pixel to thread representation of what we’ll manufacture for you. No more tech packs, no more confusion.
 
 </template>
 
@@ -299,9 +271,9 @@ Our tool is a pixel to inch representation of what we’ll manufacture for you. 
 
 <block>
 
-# Our Milestones
+# Milestones
 
-### Over 20 years of manufacturing experience
+### Over 20 Years of Manufacturing Experience
 
 </block>
 
@@ -374,7 +346,7 @@ Our tool is a pixel to inch representation of what we’ll manufacture for you. 
 
 <template v-slot:grid-text>
 
-Design your products using our **3D design tool** and **order in bulk for your brand.**
+Design your products using our patented 3D Design Tool, **pixel to inch accuracy guaranteed**.
 
 </template>
 
@@ -402,7 +374,7 @@ Design your products using our **3D design tool** and **order in bulk for your b
 
 <template v-slot:grid-text>
 
-SKYOU has mastered digital printing for both synthetic and cellulose based fabrics. Choose between **Reactive Inkjet** and **Sublimation**.
+SKYOU has mastered digital printing for both synthetic and cellulose-based fabrics. Choose between **Sublimation** and **Reactive Inkjet**.
 
 </template>
 
@@ -430,7 +402,7 @@ SKYOU has mastered digital printing for both synthetic and cellulose based fabri
 
 <template v-slot:grid-text>
 
-We use **laser cutting** for most short run production, especially when engineered artwork is required.
+**Laser cut** and **hand sewn**.  If you're ready to take your brand to the next level we can help.
 
 </template>
 

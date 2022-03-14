@@ -53,8 +53,8 @@ export default {
       }
     }
     &.secondary {
-      background: var(--color-neutral-08);
       color: var(--color-neutral-01);
+      border: 1px solid var(--color-primary-fashion-fuchsia);
 
       &:hover {
         color: var(--color-primary-fashion-fuchsia);
@@ -77,6 +77,22 @@ export default {
       }
       &:disabled {
         color: var(--color-primary-disabled);
+      }
+    }
+    &.SignUp{
+      background-color: var(--color-primary-fashion-fuchsia);
+      color: var(--color-neutral-10);
+      height: 40px;
+
+      &:hover {
+        color: var(--color-neutral-10);
+      }
+      &:disabled {
+        color: var(--color-neutral-06);
+      }
+
+      &:active {
+        color: var(--color-primary-fashion-fuchsia);
       }
     }
     &.full {

@@ -1,17 +1,9 @@
 <template>
   <nav class="flui-header-nav">
     <ul class="flui-header-nav__items">
-      <li
-        v-for="(item, index) in navItems"
-        :key="index"
-        class="flui-header-nav__items__single-item"
-      >
-        <a
-          class="flui-header-nav__items__single-item__top-anchor"
-          :href="item.to"
-          :class="item.sigleMenu"
-        >
-          {{ item.title }}
+      <li v-for="(item, index) in navItems" :key="index" class="flui-header-nav__items__single-item">
+        <a :class="item.sigleMenu" class="flui-header-nav__items__single-item__top-anchor" :href="item.to" >
+          <span> {{item.title}} </span>
           <svg
             v-if="item.dropDownList"
             class="flui-header-nav__items__single-item__top-anchor__chevron"
@@ -19,31 +11,18 @@
             height="24"
             viewBox="0 0 24 24"
             fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+            xmlns="http://www.w3.org/2000/svg">
             <path
               d="M6 9L12 15L18 9"
               stroke="#121516"
               stroke-width="1"
               stroke-linecap="round"
-              stroke-linejoin="round"
-            />
+              stroke-linejoin="round"/>
           </svg>
         </a>
-        <ul
-          class="flui-header-nav__items__single-item__dropdown"
-          v-if="item.dropDownList"
-        >
-          <li
-            v-for="(dropdownItem, index) in item.dropDownList"
-            :key="index"
-            class="flui-header-nav__items__single-item__dropdown__single-item"
-          >
-            <nuxt-link
-              class="flui-header-nav__items__single-item__dropdown__single-item__anchor"
-              :to="dropdownItem.to"
-              >{{ dropdownItem.title }}</nuxt-link
-            >
+        <ul class="flui-header-nav__items__single-item__dropdown">
+          <li v-for="(dropdownItem, index) in item.dropDownList" :key="index" class="flui-header-nav__items__single-item__dropdown__single-item">
+            <nuxt-link class="flui-header-nav__items__single-item__dropdown__single-item__anchor" :to="dropdownItem.to" >{{ dropdownItem.title }}</nuxt-link >
           </li>
         </ul>
       </li>
@@ -63,26 +42,13 @@ export default {
         },
         {
           title: "Products",
-          to: "",
-          dropDownList: [
-            {
-              title: "Apparel",
-              to: "/products",
-            },
-            {
-              title: "Bags",
-              to: "/category",
-            },
-            {
-              title: "Footwear",
-              to: "/category",
-            },            
-          ],
+          to: "/products",
+          sigleMenu: "is-single-menu"
         },
         {
           title: "About Us",
           to: "/about-us",
-          sigleMenu: "is-single-menu",
+          sigleMenu: "is-single-menu"
         },
         {
           title: "Our Technology",
@@ -113,17 +79,13 @@ export default {
             {
               title: "Full Package for Brands",
               to: "/full-package-for-brands",
-            },
-            {
-              title: "ASI/PPAI",
-              to: "/asi-ppai",
-            },
+            }
           ],
         },
         {
           title: "Custom Sourcing",
           to: "/custom-sourcing",
-          sigleMenu: "is-single-menu",
+          sigleMenu: "is-single-menu"
         },
       ],
     };
@@ -224,6 +186,13 @@ export default {
       console.log('This should be an error ', me2);
     }
   },
+  computed: {
+    initMenu() {
+      return {
+        'navIsOpen': this.isNavOpen,
+      }
+    }
+  },
   mounted() {
     this.setNav();
     
@@ -232,7 +201,7 @@ export default {
   asyncData({ $csapi }) {
       $csapi('asyncData')
   }
-};
+}
 </script>
 
 <style lang="scss">
@@ -314,6 +283,7 @@ body {
             }
           }
           &__chevron {
+            margin-top: -5px;
             transition: var(--flui-header-nav-transition);
             @include respond-to("<=m") {
               display: none;
@@ -330,15 +300,12 @@ body {
         }
         &__dropdown {
           position: absolute;
-          padding-left: 0;
           top: var(--flui-header-nav-top-dropdown-top-position);
           background-color: var(--flui-header-nav-dropdown-background-color);
           border-radius: var(--flui-header-nav-dropdown-border-radius);
           z-index: var(--flui-header-nav-dropdown-zindex);
           box-shadow: var(--flui-header-nav-dropdown-box-shadow);
           display: none;
-          top: 56px;
-          left: 0;
           @include respond-to("<=m") {
             display: grid;
             position: relative;
