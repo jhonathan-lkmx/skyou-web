@@ -1,11 +1,10 @@
 import axios from 'axios';
-import category from '../data/category.json';
-import details from '../data/details.json';
-import productsId from '../data/productsId.json';
-
 
 //======================== AXIOS ========================//
-const API_HOST = 'https://csqa.skyounet.com/cs-api';
+//const API_HOST = 'https://csqa.skyounet.com/cs-api';
+//const API_HOST = 'http://skyou-cs.dev-lk.mx/cs-api';
+const API_HOST = 'http://localhost:8080/cs-api';
+
 
 const TOKEN_KEY = 'API_AUTH_TOKEN';
 
@@ -39,20 +38,17 @@ const csapi = {
     },
     products: {
         getDetails: async( productId ) => {
-            // let result = (await axiosInstance.get(`${API_HOST}/products/item/${productId}`, getAuthConfig())).data;
-            let result = details
+            let result = (await axiosInstance.get(`${API_HOST}/products/item/${productId}`, getAuthConfig())).data;
             return result;
         },
         getByCategoryId: async( categoryId ) => {
-            // let result = (await axiosInstance.get(`${API_HOST}/products/categories/${categoryId}`, getAuthConfig())).data;
-            let result = productsId
+            let result = (await axiosInstance.get(`${API_HOST}/products/categories/${categoryId}`, getAuthConfig())).data;
             return result;
         }
     },
     categories: {
         list: async () => {
-            // let result = (await axiosInstance.get(`${API_HOST}/products/categories`, getAuthConfig())).data;
-            let result = category
+            let result = (await axiosInstance.get(`${API_HOST}/products/categories`, getAuthConfig())).data;
             return result;
         }
     }

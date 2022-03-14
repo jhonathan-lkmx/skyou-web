@@ -8,7 +8,7 @@
                             <path d="M5.33325 4.27618L6.27606 3.33337L10.9901 8.04742L6.27606 12.7615L5.33325 11.8187L9.10449 8.04742L5.33325 4.27618Z" fill="#5E7187"/>
                         </svg>
                     </a>
-                    <a class="router__breadCrumb"> {{listDetails.productCategory}}
+                    <a :href="`/single-product/${listDetails.productCategoryId}`" class="router__breadCrumb"> {{listDetails.productCategory}}
                         <svg class="flui-breadcrumb__link__chevron" width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5.33325 4.27618L6.27606 3.33337L10.9901 8.04742L6.27606 12.7615L5.33325 11.8187L9.10449 8.04742L5.33325 4.27618Z" fill="#5E7187"/>
                         </svg>
@@ -19,6 +19,8 @@
         </div>
         <div class="products__controlImg">
             <div class="products__controlImg__img">
+
+            <canvas id="product3DPreview" width="720px" height="720px"></canvas>
 
             </div>
         </div>
@@ -35,14 +37,14 @@
                 <div class="cost">
                     <div class="cost__msrp">
                         <h1 class="cost__msrp__text">MSRP  </h1>
-                        <!-- <h1 class="cost__msrp__textCost">${{listDetails.priceType.msrpPrice}}</h1>   -->
+                        <h1 class="cost__msrp__textCost" v-if="listDetails.priceType">${{listDetails.priceType.msrpPrice}}</h1>
                     </div>
                     <div class="cost__yourCost">
                         <h1 class="cost__yourCost__text">your cost  </h1>
-                        <h1 class="cost__yourCost__textCost">$9.99</h1> 
+                        <h1 class="cost__yourCost__textCost" v-if="listDetails.priceType">${{listDetails.priceType.marketPrice }}</h1> 
                     </div>
                 </div>
-                <div class="listCost" v-show="statusMessage">
+                <div class="listCost" v-show="statusMessage && false">
                     <div class="listCost__units">
                         <p class="textUnits">Units</p>
                         <p v-for="(cost, index) in listDetails.priceTiers" :key="index" class="listCost__units__unit"> {{cost.unit}} </p>
@@ -52,7 +54,7 @@
                         <p v-for="(cost, index) in listDetails.priceTiers" :key="index" class="listCost__mrsp__price"> ${{cost.price}} </p>
                     </div>
                 </div>
-                <div class="message">
+                <div class="message" v-show="false">
                     <p class="message__showMessage" @click.prevent="statusMessages" v-show="!statusMessage">Show bulk prices</p>
                     <p class="message__hideMessage" @click.prevent="statusMessages" v-show="statusMessage">Hide bulk prices</p>
                 </div>
@@ -78,7 +80,16 @@ export default{
         async getCategoryId(){
             let id = this.detailsId
             let products = await this.$csapi().products.getDetails(id);
-            this.listDetails = products
+            this.listDetails = products;
+            this.loadPreview( this.listDetails.productCode );
+        },
+        loadPreview( code ) {
+            skyou_render_product_thumb(
+                document.getElementById('product3DPreview'),
+                //TODO PARAMETER
+                'https://s3.amazonaws.com/skyou-design-tool-qa',
+                code );
+
         },
         statusMessages(){
             this.statusMessage = !this.statusMessage
@@ -91,6 +102,23 @@ export default{
 </script>
 <style lang="scss" scoped>
 @import "@lkmx/flare/src/functions/_respond-to.scss";
+
+#product3DPreview {
+    position: relative; 
+    //width: 100%; 
+    height: 100%;
+    
+
+    cursor: move; /* fallback */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+#product3DPreview:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
 
 .products{ 
     height: auto;
@@ -116,6 +144,7 @@ export default{
 
             .router{
                 margin-bottom: 20px;
+                line-height: 2rem;
 
                 &__breadCrumb{
                     font-size: 30px;
@@ -176,6 +205,8 @@ export default{
         align-content: center;
 
         &__img{
+            position: relative;
+            text-align: center;
             width: 60%;
             @include respond-to('<=m'){
                 width: 70%;
@@ -364,6 +395,7 @@ export default{
                     font-weight: normal;
                     font-size: 16px;
                     line-height: 18px;
+                    cursor: pointer;
                 }
             }
             
