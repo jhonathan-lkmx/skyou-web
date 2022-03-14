@@ -37,11 +37,11 @@
                 <div class="cost">
                     <div class="cost__msrp">
                         <h1 class="cost__msrp__text">MSRP  </h1>
-                        <h1 class="cost__msrp__textCost" v-if="listDetails.priceType">${{listDetails.priceType.msrpPrice}}</h1>
+                        <h1 class="cost__msrp__textCost" v-if="listDetails.priceType">{{listDetails.priceType.msrpPrice | currency}}</h1>
                     </div>
                     <div class="cost__yourCost">
                         <h1 class="cost__yourCost__text">your cost  </h1>
-                        <h1 class="cost__yourCost__textCost" v-if="listDetails.priceType">${{listDetails.priceType.marketPrice }}</h1> 
+                        <h1 class="cost__yourCost__textCost" v-if="listDetails.priceType">{{listDetails.priceType.marketPrice | currency }}</h1> 
                     </div>
                 </div>
                 <div class="listCost" v-show="statusMessage && false">
@@ -51,7 +51,7 @@
                     </div>
                     <div class="listCost__mrsp">
                         <p class="textMrsp">MRSP</p>
-                        <p v-for="(cost, index) in listDetails.priceTiers" :key="index" class="listCost__mrsp__price"> ${{cost.price}} </p>
+                        <p v-for="(cost, index) in listDetails.priceTiers" :key="index" class="listCost__mrsp__price"> {{cost.price | currency}} </p>
                     </div>
                 </div>
                 <div class="message" v-show="false">
@@ -86,8 +86,7 @@ export default{
         loadPreview( code ) {
             skyou_render_product_thumb(
                 document.getElementById('product3DPreview'),
-                //TODO PARAMETER
-                'https://s3.amazonaws.com/skyou-design-tool-qa',
+                this.$config.product3dTool,
                 code );
 
         },
@@ -207,6 +206,7 @@ export default{
         &__img{
             position: relative;
             text-align: center;
+            overflow: hidden;
             width: 60%;
             @include respond-to('<=m'){
                 width: 70%;

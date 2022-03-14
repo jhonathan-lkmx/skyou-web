@@ -1,12 +1,8 @@
 import axios from 'axios';
 
 //======================== AXIOS ========================//
-//const API_HOST = 'https://csqa.skyounet.com/cs-api';
-//const API_HOST = 'http://skyou-cs.dev-lk.mx/cs-api';
-const API_HOST = 'http://localhost:8080/cs-api';
-
-
 const TOKEN_KEY = 'API_AUTH_TOKEN';
+var apiHost = null;
 
 const axiosInstance = axios.create({
     withCredentials: true
@@ -24,31 +20,31 @@ function getAuthConfig() {
 const csapi = {
     auth: {
         login: async({username, password}) => {
-            let result = (await axiosInstance.post(`${API_HOST}/auth/login`, { username, password })).data;
+            let result = (await axiosInstance.post(`${apiHost}/auth/login`, { username, password })).data;
             localStorage.setItem( TOKEN_KEY, result.token );
             return result.token;
         },
         logout: async() => {
-            await axiosInstance.post(`${API_HOST}/auth/logout`, {}, getAuthConfig());
+            await axiosInstance.post(`${apiHost}/auth/logout`, {}, getAuthConfig());
         },
         getMe: async () => {
-            let result = (await axiosInstance.get(`${API_HOST}/auth/me`, getAuthConfig())).data;
+            let result = (await axiosInstance.get(`${apiHost}/auth/me`, getAuthConfig())).data;
             return result;
         },
     },
     products: {
         getDetails: async( productId ) => {
-            let result = (await axiosInstance.get(`${API_HOST}/products/item/${productId}`, getAuthConfig())).data;
+            let result = (await axiosInstance.get(`${apiHost}/products/item/${productId}`, getAuthConfig())).data;
             return result;
         },
         getByCategoryId: async( categoryId ) => {
-            let result = (await axiosInstance.get(`${API_HOST}/products/categories/${categoryId}`, getAuthConfig())).data;
+            let result = (await axiosInstance.get(`${apiHost}/products/categories/${categoryId}`, getAuthConfig())).data;
             return result;
         }
     },
     categories: {
         list: async () => {
-            let result = (await axiosInstance.get(`${API_HOST}/products/categories`, getAuthConfig())).data;
+            let result = (await axiosInstance.get(`${apiHost}/products/categories`, getAuthConfig())).data;
             return result;
         }
     }
@@ -57,5 +53,6 @@ const csapi = {
 
 
 export default ({ app }, inject) => {
+    apiHost = app.$config.apiHost;
     inject('csapi', () => csapi);
 }

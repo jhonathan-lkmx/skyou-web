@@ -116,7 +116,7 @@ export default {
     }
   },
   mounted() {
-    this.getParamPage()
+    this.getParamPage();
   }
 };
 </script>
