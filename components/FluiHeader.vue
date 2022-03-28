@@ -27,7 +27,7 @@
       <flui-header-nav></flui-header-nav>
     </nav>
 
-    <button @click="showModal = true" class="buttonLogin" aria-label="actions" v-if="!showSignOff && false">
+    <button @click="showModal = true" class="buttonLogin" aria-label="actions" v-if="!showSignOff">
       Login
     </button>
 
@@ -56,7 +56,7 @@
         <div class="modal__form">
           <div class="modal__form__control">
             <label class="textLabel">Email address</label>
-            <input class="formInput" type="text" placeholder="user@gmail.com" v-model="command.email"> 
+            <input class="formInput" type="text" placeholder="user@gmail.com" v-model="command.username"> 
           </div>
           <div class="modal__form__control">
             <label class="textLabel">Password</label>
@@ -91,7 +91,7 @@ export default {
       isNavOpen: false,
       showModal: false,
       command:{
-        email: null,
+        username: null,
         password: null
       },
       showPassword:false,
@@ -163,11 +163,17 @@ export default {
       this.showSignOff = !this.showSignOff
     },
     signIn(){
+      this.$csapi().auth.login(this.command);
       this.showButtomSignIn();
       this.showModal = false;
     },
-    signOff(){
+    async signOff(){
+      this.$csapi().auth.logout();
       this.showSignOff = !this.showSignOff
+    },
+    async loadSession() {
+      let isLogged = await this.$csapi().auth.isLogged();
+      this.showSignOff = isLogged;
     }
   },
   computed: {
@@ -180,8 +186,11 @@ export default {
       return this.showPassword ? 'text' : 'password';
     },
     isFormDisabled(){
-      return this.command.email == null || this.command.password == null
+      return this.command.username == null || this.command.password == null
     }
+  },
+  mounted () {
+    this.loadSession();
   },
 };
 </script>

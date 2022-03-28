@@ -25,26 +25,37 @@ const csapi = {
             return result.token;
         },
         logout: async() => {
+            localStorage.removeItem( TOKEN_KEY);
             await axiosInstance.post(`${apiHost}/auth/logout`, {}, getAuthConfig());
         },
         getMe: async () => {
             let result = (await axiosInstance.get(`${apiHost}/auth/me`, getAuthConfig())).data;
             return result;
         },
+        isLogged: async () => {
+            let token = localStorage.getItem(TOKEN_KEY);
+            return token != null;
+            // try {
+            //     //(await axiosInstance.get(`${apiHost}/auth/me`, getAuthConfig())).data;
+            //     return true;
+            // } catch ( error ) {
+            //     return false;
+            // }
+        }
     },
     products: {
         getDetails: async( productId ) => {
-            let result = (await axiosInstance.get(`${apiHost}/products/item/${productId}`, getAuthConfig())).data;
+            let result = (await axiosInstance.get(`${apiHost}/cs-api/products/item/${productId}`, getAuthConfig())).data;
             return result;
         },
         getByCategoryId: async( categoryId ) => {
-            let result = (await axiosInstance.get(`${apiHost}/products/categories/${categoryId}`, getAuthConfig())).data;
+            let result = (await axiosInstance.get(`${apiHost}/cs-api/products/categories/${categoryId}`, getAuthConfig())).data;
             return result;
         }
     },
     categories: {
         list: async () => {
-            let result = (await axiosInstance.get(`${apiHost}/products/categories`, getAuthConfig())).data;
+            let result = (await axiosInstance.get(`${apiHost}/cs-api/products/categories`, getAuthConfig())).data;
             return result;
         }
     }

@@ -44,7 +44,7 @@
                         <h1 class="cost__yourCost__textCost" v-if="listDetails.priceType">{{listDetails.priceType.marketPrice | currency }}</h1> 
                     </div>
                 </div>
-                <div class="listCost" v-show="statusMessage && false">
+                <div class="listCost" v-show="statusMessage && isLogged">
                     <div class="listCost__units">
                         <p class="textUnits">Units</p>
                         <p v-for="(cost, index) in listDetails.priceTiers" :key="index" class="listCost__units__unit"> {{cost.unit}} </p>
@@ -54,7 +54,7 @@
                         <p v-for="(cost, index) in listDetails.priceTiers" :key="index" class="listCost__mrsp__price"> {{cost.price | currency}} </p>
                     </div>
                 </div>
-                <div class="message" v-show="false">
+                <div class="message" v-show="statusMessage && isLogged">
                     <p class="message__showMessage" @click.prevent="statusMessages" v-show="!statusMessage">Show bulk prices</p>
                     <p class="message__hideMessage" @click.prevent="statusMessages" v-show="statusMessage">Hide bulk prices</p>
                 </div>
@@ -70,11 +70,13 @@ export default{
         return{
             detailsId: this.$route.params.id,
             listDetails: '',
-            statusMessage:true
+            statusMessage:true,
+            isLogged: false
         }
     },
-    mounted(){
+    async mounted(){
         this.getCategoryId()
+        this.isLogged = await this.$csapi().auth.isLogged();
     },
     methods:{
         async getCategoryId(){

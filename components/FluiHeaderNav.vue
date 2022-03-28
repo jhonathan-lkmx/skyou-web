@@ -148,43 +148,6 @@ export default {
       var categories = await this.$csapi().categories.list();
       console.log('Categories loaded ', categories);
     },
-    async loadTestProduct() {
-      const id = 6;
-      var product = await this.$csapi().products.getDetails(5);
-      console.log('Product  loaded ', product);
-    },
-    async testEndpoints() {
-
-      // Test login endpoint
-      var token = await this.$csapi().auth.login({username: 'brandtestpartner@gmail.com', password: '111111'});
-      console.log('Token ', token);
-
-
-      // Test categories endpoint
-      var categories = await this.$csapi().categories.list();
-      console.log('Categories ', categories);
-
-
-      // Test products by categories endpoint
-      var products = await this.$csapi().products.getByCategoryId(7);
-      console.log('Products ', products);
-
-      // Test product endpoint
-      var product = await this.$csapi().products.getDetails(28);
-      console.log('Product ', product);
-
-      // Test me endpoint
-      var me = await this.$csapi().auth.getMe();
-      console.log('Me ', me);
-
-      // Test logout endpoint
-      await this.$csapi().auth.logout();
-      console.log('Out ok');
-
-      // Test me endpoint
-      var me2 = await this.$csapi().auth.getMe();
-      console.log('This should be an error ', me2);
-    }
   },
   computed: {
     initMenu() {
@@ -195,8 +158,6 @@ export default {
   },
   mounted() {
     this.setNav();
-    
-    this.testEndpoints();
   },
   asyncData({ $csapi }) {
       $csapi('asyncData')
