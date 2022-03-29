@@ -54,7 +54,7 @@
                         <p v-for="(cost, index) in listDetails.priceTiers" :key="index" class="listCost__mrsp__price"> {{cost.price | currency}} </p>
                     </div>
                 </div>
-                <div class="message" v-show="statusMessage && isLogged">
+                <div class="message" v-show="isLogged">
                     <p class="message__showMessage" @click.prevent="statusMessages" v-show="!statusMessage">Show bulk prices</p>
                     <p class="message__hideMessage" @click.prevent="statusMessages" v-show="statusMessage">Hide bulk prices</p>
                 </div>
