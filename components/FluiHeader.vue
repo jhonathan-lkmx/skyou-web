@@ -27,12 +27,12 @@
       <flui-header-nav></flui-header-nav>
     </nav>
 
-    <button @click="showModal = true" class="buttonLogin" aria-label="actions" v-if="!showSignOff">
+    <button @click="showLoginModal" class="buttonLogin" aria-label="actions" v-if="!showSignOff">
       Login
     </button>
 
-    <button @click="signOff" class="buttonSignIn" aria-label="actions" v-if="showSignOff">
-      Sign Off
+    <button @click="signOff" class="buttonLogout" aria-label="actions" v-if="showSignOff">
+      Logout
     </button>
 
     <transition name="fade">
@@ -61,7 +61,7 @@
           <div class="modal__form__control">
             <label class="textLabel">Password</label>
             <div class="input-wrapper">
-              <input class="formInput" :type="inputType" placeholder="*********" v-model="command.password"> 
+              <input class="formInput" :type="inputType" placeholder="*********" v-model="command.password" v-on:keyup.enter="signIn()"> 
               <img src="../assets/img/eye.svg" v-show="!showPassword" class="input-wrapper__icon" @click="toogleShowPassword">
               <img src="../assets/img/eye-off.svg" v-show="showPassword" class="input-wrapper__icon" @click="toogleShowPassword">
             </div>
@@ -156,24 +156,38 @@ export default {
         navIsClosed();
       }
     },
+    showLoginModal() {
+      this.showTextError = false;
+      this.showModal = true;
+      this.$set(this.command, 'username', null);
+      this.$set(this.command, 'password', null);
+    },
     toogleShowPassword(){
       this.showPassword = !this.showPassword
     },
     showButtomSignIn(){
       this.showSignOff = !this.showSignOff
     },
-    signIn(){
-      this.$csapi().auth.login(this.command);
-      this.showButtomSignIn();
-      this.showModal = false;
+    async signIn(){
+      try {
+        this.showTextError = false;
+        await this.$csapi().auth.login(this.command);
+        this.showButtomSignIn();
+        this.showModal = false;
+      } catch( error ) {
+        this.showTextError = true;
+      }
     },
-    async signOff(){
-      this.$csapi().auth.logout();
+    async signOff() {
       this.showSignOff = !this.showSignOff
+      this.$csapi().auth.logout();
+      this.$root.$emit('session-updated');
     },
     async loadSession() {
       let isLogged = await this.$csapi().auth.isLogged();
       this.showSignOff = isLogged;
+      this.$root.$emit('session-updated');
+      
     }
   },
   computed: {
@@ -334,7 +348,9 @@ export default {
     }
   }
 
-  .buttonLogin{
+  .buttonLogin,
+  .buttonLogout {
+    cursor: pointer;
     background-color: white;
     border: 1px solid var(--color-primary-fashion-fuchsia);
     color: var(--color-neutral-01);
@@ -349,6 +365,9 @@ export default {
       }
     }
     
+    &:hover { 
+      background-color: #d6d6d6;
+    }
   }
 
   .buttonSignIn{

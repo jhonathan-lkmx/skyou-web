@@ -39,7 +39,7 @@
                         <h1 class="cost__msrp__text">MSRP  </h1>
                         <h1 class="cost__msrp__textCost" v-if="listDetails.priceType">{{listDetails.priceType.msrpPrice | currency}}</h1>
                     </div>
-                    <div class="cost__yourCost">
+                    <div class="cost__yourCost" v-if="false">
                         <h1 class="cost__yourCost__text">your cost  </h1>
                         <h1 class="cost__yourCost__textCost" v-if="listDetails.priceType">{{listDetails.priceType.marketPrice | currency }}</h1> 
                     </div>
@@ -50,7 +50,7 @@
                         <p v-for="(cost, index) in listDetails.priceTiers" :key="index" class="listCost__units__unit"> {{cost.unit}} </p>
                     </div>
                     <div class="listCost__mrsp">
-                        <p class="textMrsp">MRSP</p>
+                        <p class="textMrsp">Cost</p>
                         <p v-for="(cost, index) in listDetails.priceTiers" :key="index" class="listCost__mrsp__price"> {{cost.price | currency}} </p>
                     </div>
                 </div>
@@ -76,7 +76,8 @@ export default{
     },
     async mounted(){
         this.getCategoryId()
-        this.isLogged = await this.$csapi().auth.isLogged();
+        this.checkSession();
+        this.$on('session-updated', this.checkSession);
     },
     methods:{
         async getCategoryId(){
@@ -94,6 +95,9 @@ export default{
         },
         statusMessages(){
             this.statusMessage = !this.statusMessage
+        },
+        async checkSession() {
+            this.isLogged = await this.$csapi().auth.isLogged();
         }
     },
     asyncData({ $csapi }) {
@@ -228,6 +232,7 @@ export default{
         display: grid;
         grid-template-columns: 20% 40% 20% 20%;
         margin-bottom: 16px;
+        margin-top: 16px;
 
         @include respond-to('<=m'){
             display: grid;
@@ -293,7 +298,7 @@ export default{
             }
 
             .cost{
-                height: 99px;
+                height: 70px;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-end;

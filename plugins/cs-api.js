@@ -21,7 +21,12 @@ const csapi = {
     auth: {
         login: async({username, password}) => {
             let result = (await axiosInstance.post(`${apiHost}/auth/login`, { username, password })).data;
-            localStorage.setItem( TOKEN_KEY, result.token );
+            
+            if(result.token) 
+                localStorage.setItem( TOKEN_KEY, result.token );
+            else
+                throw 'access-error';
+            
             return result.token;
         },
         logout: async() => {
