@@ -77,7 +77,7 @@ export default{
         }
     },
     async mounted() {
-        this.detailsId = 5;//this.$route.params.id;
+        this.detailsId = this.$route.query.id;
         this.getCategoryId()
         this.checkSession();
         this.$on('session-updated', this.checkSession);

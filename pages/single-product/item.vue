@@ -39,7 +39,7 @@ export default{
         }
     },
     mounted() {
-        this.categoryId = this.$route.params.id;
+        this.categoryId = this.$route.query.id;
         this.loadCategory();
     },
     methods:{

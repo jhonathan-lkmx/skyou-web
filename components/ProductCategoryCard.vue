@@ -1,7 +1,7 @@
 <template>
   <div class="list">
     <div class="list__product" v-for="product in listProductCategory" :key="product.id">
-      <nuxt-link :to="`/details/${product.id}`" class="list__product__link">
+      <nuxt-link :to="`/details/item?id=${product.id}`" class="list__product__link">
         <div class="list__product__img">
           <img :src="product.image" class="img" :alt="product.name" v-if="product.image">
           <img src="../assets/img/image-placeholder.png" class="img" :alt="product.name" v-else>
