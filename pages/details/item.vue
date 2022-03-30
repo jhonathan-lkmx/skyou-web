@@ -8,7 +8,7 @@
                             <path d="M5.33325 4.27618L6.27606 3.33337L10.9901 8.04742L6.27606 12.7615L5.33325 11.8187L9.10449 8.04742L5.33325 4.27618Z" fill="#5E7187"/>
                         </svg>
                     </a>
-                    <a :href="`/single-product/${listDetails.productCategoryId}`" class="router__breadCrumb"> {{listDetails.productCategory}}
+                    <a :href="`/single-product/item?id=${listDetails.productCategoryId}`" class="router__breadCrumb"> {{listDetails.productCategory}}
                         <svg class="flui-breadcrumb__link__chevron" width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5.33325 4.27618L6.27606 3.33337L10.9901 8.04742L6.27606 12.7615L5.33325 11.8187L9.10449 8.04742L5.33325 4.27618Z" fill="#5E7187"/>
                         </svg>
