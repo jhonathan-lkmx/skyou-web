@@ -30,7 +30,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/flare',
-    '~/plugins/cs-api.js',
+    '~/plugins/tooltip.js',
     '~/filters/filters.js'
   ],
 

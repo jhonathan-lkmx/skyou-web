@@ -2,6 +2,14 @@
 # yarn lockfile v1
 
 
+"@adamdehaven/vue-custom-tooltip@^1.4.4":
+  version "1.4.4"
+  resolved "https://registry.yarnpkg.com/@adamdehaven/vue-custom-tooltip/-/vue-custom-tooltip-1.4.4.tgz#e250f453748510e8583f97ab27fc7a5c7ade8326"
+  integrity sha512-74kfeaw56bGhz96KXSbsg4XLnfaR+l+Mt11umK57+kk/T66QDHjjcpwJGEfjrF/+vvk7RIj71hAj4cbgXN7rpA==
+  dependencies:
+    core-js "^3.8.3"
+    vue "^2.6.12"
+
 "@babel/code-frame@^7.14.5":
   version "7.14.5"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.14.5.tgz#23b08d740e83f49c5e59945fbf1b43e80bbf4edb"
@@ -3188,6 +3196,11 @@ core-js@^3.15.1, core-js@^3.6.5:
   version "3.16.2"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.16.2.tgz#3f485822889c7fc48ef463e35be5cc2a4a01a1f4"
   integrity sha512-P0KPukO6OjMpjBtHSceAZEWlDD1M2Cpzpg6dBbrjFqFhBHe/BwhxaP820xKOjRn/lZRQirrCusIpLS/n2sgXLQ==
+
+core-js@^3.8.3:
+  version "3.21.1"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.21.1.tgz#f2e0ddc1fc43da6f904706e8e955bc19d06a0d94"
+  integrity sha512-FRq5b/VMrWlrmCzwRrpDYNxyHP9BcAZC+xHJaqTgIE5091ZV1NTmyh0sGOg5XqpnHvR0svdy0sv1gWA1zmhxig==
 
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"

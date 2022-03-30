@@ -47,7 +47,10 @@
                 <div class="listCost" v-show="statusMessage && isLogged">
                     <div class="listCost__units">
                         <p class="textUnits">Units</p>
-                        <p v-for="(cost, index) in listDetails.priceTiers" :key="index" class="listCost__units__unit"> {{cost.unit}} </p>
+                        <p v-for="(cost, index) in listDetails.priceTiers" :key="index" class="listCost__units__unit">
+                            {{cost.unit}} 
+                            <span v-if="index==0">/ Shopify MOD <vue-custom-tooltip class="tooltip" :multiline="true" label="All orders processed through the Shopify app are considered MOD (manufacture on demand), and will be billed at the MOD price.  To receive bulk pricing please reach out to us at sales@skyou.com.  In order to qualify for bulk pricing you must order the same product and the same design e.g. 10 t-shirts with the same bunny design (you can order any variation of sizes).">?</vue-custom-tooltip></span>
+                        </p>
                     </div>
                     <div class="listCost__mrsp">
                         <p class="textMrsp">Cost</p>
@@ -107,9 +110,16 @@ export default{
 <style lang="scss" scoped>
 @import "@lkmx/flare/src/functions/_respond-to.scss";
 
+.tooltip {
+    display: inline-block;
+    border-radius: 1rem;
+    line-height: 1rem;
+    background-color: black;
+    color: white;
+    padding: 2px 6px;
+}
 #product3DPreview {
     position: relative; 
-    //width: 100%; 
     height: 100%;
     
 
@@ -353,7 +363,7 @@ export default{
 
             .listCost{
                 display: grid;
-                grid-template-columns: 50% 50%;
+                grid-template-columns: 60% 40%;
 
                 &__units{
                     text-align: left;
@@ -402,6 +412,9 @@ export default{
                     font-size: 16px;
                     line-height: 18px;
                     cursor: pointer;
+                }
+                &__showMessage{
+                    margin-top: 2.5rem;
                 }
             }
             
