@@ -55,9 +55,6 @@ export default{
 
             this.listProducts = categoryMap;
         }
-    },
-    asyncData({ $csapi }) {
-        $csapi('asyncData')
     }
 }
 </script>

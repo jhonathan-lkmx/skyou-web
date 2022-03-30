@@ -62,7 +62,9 @@
         </div>
     </div>
 </template>
+
 <script>
+import api from '@/service/api';
 
 export default{
     name:'id',
@@ -83,7 +85,7 @@ export default{
     methods:{
         async getCategoryId(){
             let id = this.detailsId
-            let products = await this.$csapi().products.getDetails(id);
+            let products = await api.products.getDetails(id);
             this.listDetails = products;
             this.loadPreview( this.listDetails.productCode );
         },
@@ -92,17 +94,13 @@ export default{
                 document.getElementById('product3DPreview'),
                 this.$config.product3dTool,
                 code );
-
         },
         statusMessages(){
             this.statusMessage = !this.statusMessage
         },
         async checkSession() {
-            this.isLogged = await this.$csapi().auth.isLogged();
+            //this.isLogged = await api.auth.isLogged();
         }
-    },
-    asyncData({ $csapi }) {
-        $csapi('asyncData')
     }
 }
 </script>
