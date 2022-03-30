@@ -24,6 +24,7 @@
 </template>
 <script>
 import cardProducts from '../../components/ProductCategoryCard.vue'
+import api from '@/service/api';
 
 export default{
     name:'id',
@@ -44,7 +45,7 @@ export default{
     methods:{
         async loadCategory(){
             var id = this.categoryId
-            var category = await this.$csapi().products.getByCategoryId(id);
+            var category = await api.products.getByCategoryId(id);
             this.category = category;
 
             var productMap = {};
@@ -64,9 +65,6 @@ export default{
 
             this.listProductCategory = productMap;
         }
-    },
-    asyncData({ $csapi }) {
-        $csapi('asyncData')
     }
 }
 </script>

@@ -81,6 +81,7 @@
 
 <script>
 import btnLogin from './Btn.vue'
+import api from '@/service/api';
 
 export default {
   components:{
@@ -171,7 +172,7 @@ export default {
     async signIn(){
       try {
         this.showTextError = false;
-        await this.$csapi().auth.login(this.command);
+        api.auth.login(this.command);
         this.showButtomSignIn();
         this.showModal = false;
       } catch( error ) {
@@ -180,11 +181,11 @@ export default {
     },
     async signOff() {
       this.showSignOff = !this.showSignOff
-      this.$csapi().auth.logout();
+      api.auth.logout();
       this.$root.$emit('session-updated');
     },
     async loadSession() {
-      let isLogged = await this.$csapi().auth.isLogged();
+      let isLogged = await api.auth.isLogged();
       this.showSignOff = isLogged;
       this.$root.$emit('session-updated');
       

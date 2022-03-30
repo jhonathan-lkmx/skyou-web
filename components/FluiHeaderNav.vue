@@ -31,6 +31,8 @@
 </template>
 
 <script>
+import api from '@/service/api';
+
 export default {
   data() {
     return {
@@ -145,7 +147,7 @@ export default {
       });
     },
     async loadCategories() {
-      var categories = await this.$csapi().categories.list();
+      var categories = await api.categories.list();
       console.log('Categories loaded ', categories);
     },
   },
@@ -158,9 +160,6 @@ export default {
   },
   mounted() {
     this.setNav();
-  },
-  asyncData({ $csapi }) {
-      $csapi('asyncData')
   }
 }
 </script>

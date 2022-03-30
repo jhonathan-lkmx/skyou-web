@@ -1,6 +1,16 @@
 import client from '@/service/client';
 
 const api = {
+    auth: {
+        login: async() => {
+        },
+        logout: async() => {
+        },
+        getMe: async () => {
+        },
+        isLogged: async () => {
+        }
+    },
     products: {
         getDetails: async( productId ) => {
             let result = (await client.get(`/cs-api/products/item/${productId}`)).data;
