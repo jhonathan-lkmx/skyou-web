@@ -1,38 +1,43 @@
 import axios from 'axios';
-
-let apiUrl = 'https://skyou-cs.dev-lk.mx'; //process.env.VUE_APP_API_URL;
+const TOKEN_KEY = 'API_AUTH_TOKEN';
+let apiUrl = '';
 
 let addSecurity = function(config) {
-    config = config || {};
-    config.authentication = 'yokozuna';
-    return config;
+    return {
+        headers: {
+            'x-auth-token': localStorage.getItem(TOKEN_KEY)
+        }
+    }
 };
 
 
 let apiClient = {
-    get: function(path, config) {
+    init: (url) => {
+        apiUrl = url;
+    },
+    get: (path, config) => {
         return axios.get(apiUrl + path, config);
     },
-    put: function(path, data, config) {
+    put: (path, data, config) => {
         return axios.put(apiUrl + path, data, config);
     },
-    post: function(path, data, config) {
+    post: (path, data, config) => {
         return axios.post(apiUrl + path, data, config);
     },
-    delete: function(path, config) {
+    delete: (path, config) => {
         return axios.delete(apiUrl + path, config);
     },
     secure: {
-        get: function(path, config) {
+        get: (path, config) => {
             return axios.get(apiUrl + path, addSecurity(config));
         },
-        put: function(path, data, config) {
+        put: (path, data, config) => {
             return axios.put(apiUrl + path, data, addSecurity(config));
         },
-        post: function(path, data, config) {
+        post: (path, data, config) => {
             return axios.post(apiUrl + path, data, addSecurity(config));
         },
-        delete: function(path, config) {
+        delete: (path, config) => {
             return axios.delete(apiUrl + path, addSecurity(config));
         }
     },

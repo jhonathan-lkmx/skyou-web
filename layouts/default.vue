@@ -99,6 +99,8 @@
 
 <script>
 import FluiHeader from '../components/FluiHeader.vue';
+import api from '@/service/api';
+
 export default {
   components: { FluiHeader },
   data(){
@@ -114,6 +116,9 @@ export default {
         this.page=true
       }
     }
+  },
+  beforeMount() {
+    api.init(this.$config.apiHost);
   },
   mounted() {
     this.getParamPage();

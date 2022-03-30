@@ -80,7 +80,7 @@ export default{
         this.detailsId = this.$route.query.id;
         this.getCategoryId()
         this.checkSession();
-        this.$on('session-updated', this.checkSession);
+        this.$root.$on('session-updated', this.checkSession);
     },
     methods:{
         async getCategoryId(){
@@ -99,7 +99,7 @@ export default{
             this.statusMessage = !this.statusMessage
         },
         async checkSession() {
-            //this.isLogged = await api.auth.isLogged();
+            this.isLogged = await api.auth.isLogged();
         }
     }
 }

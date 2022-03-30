@@ -1,14 +1,39 @@
 import client from '@/service/client';
+const TOKEN_KEY = 'API_AUTH_TOKEN';
 
 const api = {
+    init: (url) => {
+        client.init(url);
+    },
     auth: {
-        login: async() => {
-        },
-        logout: async() => {
+        login: async({username, password}) => {
+            let result = (await client.post(`/auth/login`, { username, password })).data;
+            
+            if(result.token) 
+                localStorage.setItem( TOKEN_KEY, result.token );
+            else
+                throw 'access-error';
+            
+            return result.token;
         },
         getMe: async () => {
+            let result = (await client.secure.get(`/auth/me`)).data;
+            return result;
         },
+        logout: async() => {
+            localStorage.removeItem( TOKEN_KEY);
+            await client.post(`/auth/logout`, {});
+        },
+        
         isLogged: async () => {
+            let token = localStorage.getItem(TOKEN_KEY);
+            return token != null;
+            // try {
+            //     //(await axiosInstance.get(`${apiHost}/auth/me`, getAuthConfig())).data;
+            //     return true;
+            // } catch ( error ) {
+            //     return false;
+            // }
         }
     },
     products: {

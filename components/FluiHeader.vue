@@ -172,8 +172,8 @@ export default {
     async signIn(){
       try {
         this.showTextError = false;
-        api.auth.login(this.command);
-        this.showButtomSignIn();
+        await api.auth.login(this.command);
+        this.loadSession();
         this.showModal = false;
       } catch( error ) {
         this.showTextError = true;
