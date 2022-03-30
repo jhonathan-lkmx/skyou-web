@@ -68,13 +68,14 @@ export default{
     name:'id',
     data(){
         return{
-            detailsId: this.$route.params.id,
+            detailsId: null,
             listDetails: '',
             statusMessage:true,
             isLogged: false
         }
     },
-    async mounted(){
+    async mounted() {
+        this.detailsId = this.$route.params.id;
         this.getCategoryId()
         this.checkSession();
         this.$on('session-updated', this.checkSession);

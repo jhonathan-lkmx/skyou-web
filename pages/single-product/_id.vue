@@ -32,12 +32,13 @@ export default{
     },
     data(){
         return{
-            categoryId: this.$route.params.id,
+            categoryId: null,
             category: null,
             listProductCategory: ''
         }
     },
-    mounted(){
+    mounted() {
+        this.categoryId = this.$route.params.id;
         this.getCategoryId()
     },
     methods:{
