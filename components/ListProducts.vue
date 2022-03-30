@@ -17,6 +17,7 @@
 </template>
 <script>
 import cardProducts from './ProductsCard.vue'
+import api from '@/service/api';
 
 export default{
     name:'ListProducts',
@@ -34,7 +35,7 @@ export default{
     },
     methods:{
         async loadCategories() {
-            var categories = await this.$csapi().categories.list();
+            var categories = await api.categories.list();
 
             var categoryMap = {};
             categories.forEach(cat => {

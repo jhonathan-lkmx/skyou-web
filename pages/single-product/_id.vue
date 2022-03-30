@@ -39,10 +39,10 @@ export default{
     },
     mounted() {
         this.categoryId = this.$route.params.id;
-        this.getCategoryId()
+        this.loadCategory();
     },
     methods:{
-        async getCategoryId(){
+        async loadCategory(){
             var id = this.categoryId
             var category = await this.$csapi().products.getByCategoryId(id);
             this.category = category;
