@@ -144,7 +144,7 @@ export default{
             h1 {
                 margin-top: 4rem;
                 margin-bottom: 1rem;
-                color: #EE008F;
+                color: var(--color-primary-fashion-fuchsia);
             }
         }
 

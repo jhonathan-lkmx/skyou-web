@@ -83,10 +83,10 @@
 
             /* primary/fashion-fuchsia */
 
-            background: #EE008F;
+            background: var(--color-primary-fashion-fuchsia);
             /* primary/fashion-fuchsia */
 
-            border: 1px solid #EE008F;
+            border: 1px solid var(--color-primary-fashion-fuchsia);
             box-sizing: border-box;
             border-radius: 4px;
 

@@ -3,7 +3,7 @@
     <div class="list__product" v-for="product in listProductCategory" :key="product.id">
       <nuxt-link :to="`/details/item?id=${product.id}`" class="list__product__link">
         <div class="list__product__img">
-          <img :src="product.image" class="img" :alt="product.name" v-if="product.image">
+          <img :src="product.imageUrl" class="img" :alt="product.name" v-if="product.imageUrl">
           <img src="../assets/img/image-placeholder.png" class="img" :alt="product.name" v-else>
         </div>
         <div class="list__product__item">
@@ -34,17 +34,25 @@ export default {
 
     &__img{
         width: 100%;
-        height: 80%;
+        height: unset;
+        
 
         .img{
-        width: 100%;
-        height: 100%;
+          width: 100%;
+          height: unset;
+          object-fit: cover;
+          
+          &:after {
+            content: "";
+            display: block;
+            padding-bottom: 100%;
+          }
         }
     }
 
     &__item{
         width: 100%;
-        height: 20%;
+        height: 105px;
         display: flex;
         justify-content: center;
         align-content: center;
@@ -54,7 +62,7 @@ export default {
           font-style: normal;
           font-weight: bold;
           font-size: 24px;
-          line-height: 130%;
+          line-height: 31.2px;
           color: var(--color-neutral-01);
           margin-top: 10px;
         }

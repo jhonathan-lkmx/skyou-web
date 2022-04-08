@@ -4,19 +4,28 @@
             <div class="products__header__title">
                 <div class="router">
                     <a href="/products" class="router__breadCrumb"> Products 
-                        <svg class="router__breadCrumb__chevron" width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="router__breadCrumb__chevron" width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5.33325 4.27618L6.27606 3.33337L10.9901 8.04742L6.27606 12.7615L5.33325 11.8187L9.10449 8.04742L5.33325 4.27618Z" fill="#5E7187"/>
                         </svg>
                     </a>
                     <a class="router__breadCrumb__textProduct" v-if="category"> {{category.name}}</a>
                 </div>
+                <h1 v-if="category">{{category.name}}</h1>
             </div>
         </div>
         <div class="products__categories">
-            <div class="products__categories__items">
+            <div class="products__categories__items" v-if="category">
                 <div class="products__categories__items__gender" v-for="category in listProductCategory" :key="category.id">
-                    <h1>{{category.name}}</h1>
+                    <h2>{{category.name}}</h2>
                     <card-products class="card" :listProductCategory="category.products"/>
+                </div>
+                <div class="products__categories__items__empty" v-if="category.products.length==0">
+                    <img src="@/assets/img/empty-state.png">
+                    <h3>Sorry, there are no products for this category yet. </h3>
+                    <p>However feel free to check our other products</p>
+                    <router-link class="art-action" :to="`/products`" custom>
+                        <button class="with-icon" @click="navigate" @keypress.enter="navigate" role="link">Go to Products</button>
+                    </router-link>
                 </div>
             </div>
         </div>
@@ -78,7 +87,7 @@ export default{
 
     &__header{
         width: 100%;
-        height: 75px;
+        height: 120px;
         display: flex;
         justify-content: center;
         margin-top: 20px;
@@ -94,11 +103,11 @@ export default{
             }
             
 
-            .router{
+            .router {
                 margin-bottom: 20px;
 
                 &__breadCrumb{
-                    font-size: 30px;
+                    font-size: 1rem;
                     @include respond-to('<=m'){
                         font-size: 25px;
 
@@ -116,7 +125,7 @@ export default{
                         font-family: Comfortaa;
                         font-style: normal;
                         font-weight: bold;
-                        font-size: 30px;
+                        font-size: 1rem;
                         text-decoration: none;
                         color: var(--color-neutral-01);
                         @include respond-to('<=m'){
@@ -131,6 +140,12 @@ export default{
                     }
                 }
 
+            }
+
+            h1 {
+                margin-top: 1.5rem;
+                font-size: 44px;
+                font-weight: 700;
             }
 
         }
@@ -151,11 +166,40 @@ export default{
                 }
             }
             &__gender {
-                h1 {
+                h2 {
+                    font-size: 34px;
+                    font-weight: 700;
                     text-align: left;
-                    color: #EE008F;
+                    color: --color-primary-fashion-fuchsia;
                     margin-top: 4rem;
                     margin-bottom: 1rem;
+                }
+            }
+
+            &__empty {
+                text-align: center;
+                padding: 2.5rem;
+                h3 {
+                    margin-top: 1rem;
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 31.2px;
+                    color: #121516;
+                    font-family: Comfortaa;
+                }
+                p {
+                    color: #84949A;
+                    font-size: 16px;
+                    line-height: 18px;
+                }
+                img {
+                    display: inline-block;
+                }
+                button {
+                    background-color: var(--color-primary-fashion-fuchsia);
+                    color: white;
+                    border-radius: 4px;
+                    cursor:pointer;
                 }
             }
             .card{

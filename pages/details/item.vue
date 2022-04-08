@@ -4,12 +4,12 @@
             <div class="products__header__title">
                 <div class="router">
                     <a href="/products" class="router__breadCrumb"> Products 
-                        <svg class="flui-breadcrumb__link__chevron" width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="flui-breadcrumb__link__chevron" width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5.33325 4.27618L6.27606 3.33337L10.9901 8.04742L6.27606 12.7615L5.33325 11.8187L9.10449 8.04742L5.33325 4.27618Z" fill="#5E7187"/>
                         </svg>
                     </a>
                     <a :href="`/single-product/item?id=${listDetails.productCategoryId}`" class="router__breadCrumb"> {{listDetails.productCategory}}
-                        <svg class="flui-breadcrumb__link__chevron" width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="flui-breadcrumb__link__chevron" width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5.33325 4.27618L6.27606 3.33337L10.9901 8.04742L6.27606 12.7615L5.33325 11.8187L9.10449 8.04742L5.33325 4.27618Z" fill="#5E7187"/>
                         </svg>
                     </a>
@@ -17,7 +17,7 @@
                 </div>
             </div>
         </div>
-        <div class="products__controlImg">
+        <div class="products__controlImg" v-if="modelAvailable">
             <div class="products__controlImg__img">
 
             <canvas id="product3DPreview" width="720px" height="720px"></canvas>
@@ -36,7 +36,7 @@
             <div class="products__details__container2" >
                 <div class="cost">
                     <div class="cost__msrp">
-                        <h1 class="cost__msrp__text">MSRP  </h1>
+                        <h1 class="cost__msrp__text">MSRP </h1>
                         <h1 class="cost__msrp__textCost" v-if="listDetails.priceType">{{listDetails.priceType.msrpPrice | currency}}</h1>
                     </div>
                     <div class="cost__yourCost" v-if="false">
@@ -76,7 +76,8 @@ export default{
             detailsId: null,
             listDetails: '',
             statusMessage:true,
-            isLogged: false
+            isLogged: false,
+            modelAvailable: true
         }
     },
     async mounted() {
@@ -94,9 +95,9 @@ export default{
         },
         loadPreview( code ) {
             skyou_render_product_thumb(
-                document.getElementById('product3DPreview'),
-                this.$config.product3dTool,
-                code );
+                    document.getElementById('product3DPreview'),
+                    this.$config.product3dTool,
+                    code );
         },
         statusMessages(){
             this.statusMessage = !this.statusMessage
@@ -161,7 +162,7 @@ export default{
                 line-height: 2rem;
 
                 &__breadCrumb{
-                    font-size: 30px;
+                    font-size: 1rem;
                     @include respond-to('<=m'){
                         font-size: 25px;
 
@@ -179,7 +180,7 @@ export default{
                         font-family: Comfortaa;
                         font-style: normal;
                         font-weight: bold;
-                        font-size: 30px;
+                        font-size: 1rem;
                         text-decoration: none;
                         color: var(--color-neutral-01);
                         @include respond-to('<=m'){
@@ -233,7 +234,7 @@ export default{
                 }
             }
             height: 721px;
-            background-color: var(--color-neutral-04);
+            background-color:  var(--color-neutral-09);
         }
     }
 
@@ -295,7 +296,7 @@ export default{
             grid-column: 3 / 4;
             height: 100%;
             text-align: left;
-            background-color: var(--color-neutral-08);
+            background-color: var(--color-neutral-09);
             @include respond-to('<=m'){
                 grid-column: 2 / 3;
                 grid-row: 2 / 3;
