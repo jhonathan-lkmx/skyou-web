@@ -107,7 +107,7 @@ export default{
                         font-family: Comfortaa;
                         font-style: normal;
                         font-weight: bold;
-                        font-size: 30px;
+                        font-size: 44px;
                         text-decoration: none;
                         color: var(--color-neutral-01);
                         @include respond-to('<=m'){
@@ -142,9 +142,10 @@ export default{
 
         &__group {
             h1 {
-                margin-top: 4rem;
+                margin-top: 58px;
                 margin-bottom: 1rem;
                 color: var(--color-primary-fashion-fuchsia);
+                font-size: 34px;
             }
         }
 

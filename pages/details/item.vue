@@ -177,7 +177,7 @@ export default{
                     }
 
                     &__textProduct{
-                        font-family: Comfortaa;
+                        font-family: var(--f-default-text-font);
                         font-style: normal;
                         font-weight: bold;
                         font-size: 1rem;
@@ -272,6 +272,7 @@ export default{
             .detailsProduc{
                 width: 100%;
                 &__details{
+                    font-family: var(--f-default-headers-font);
                     font-size: 16px;
                 }
                 &__textDetails{

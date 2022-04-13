@@ -116,13 +116,14 @@ export default{
                         }
                     }
                     text-decoration: none;
-                    color: var(--flui-breadcrumb-link-color);
+                    color: var(--color-neutral-04);
+                    
                     &:hover {
                         color: var(--color-primary-fashion-fuchsia);
                     }
 
                     &__textProduct{
-                        font-family: Comfortaa;
+                        font-family: var(--f-default-text-font);
                         font-style: normal;
                         font-weight: bold;
                         font-size: 1rem;
@@ -170,7 +171,7 @@ export default{
                     font-size: 34px;
                     font-weight: 700;
                     text-align: left;
-                    color: --color-primary-fashion-fuchsia;
+                    color: var(--color-primary-fashion-fuchsia);
                     margin-top: 4rem;
                     margin-bottom: 1rem;
                 }
