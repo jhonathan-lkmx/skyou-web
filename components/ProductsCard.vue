@@ -3,7 +3,7 @@
     <div class="list__product" v-for="product in listProducts" :key="product.id">
       <nuxt-link :to="`/single-product/item?id=${product.id}`" class="list__product__link">
         <div class="list__product__img">
-          <img :src="product.imageUrl" class="img" :alt="product.name" v-if="product.imageUrl">
+          <img :src="`${product.imageUrl}?${now}`" class="img" :alt="product.name" v-if="product.imageUrl">
           <img src="../assets/img/image-placeholder.png" class="img" :alt="product.name" v-else>
         </div>
         <div class="list__product__item">
@@ -18,7 +18,12 @@
 export default {
   props: {
     listProducts: ''
-  }
+  },
+  data() {
+    return {
+      now: new Date().getTime()
+    }
+  },
 }
 </script>
 
