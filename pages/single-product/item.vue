@@ -125,7 +125,7 @@ export default{
                     &__textProduct{
                         font-family: var(--f-default-text-font);
                         font-style: normal;
-                        font-weight: bold;
+                        font-weight: 400;
                         font-size: 1rem;
                         text-decoration: none;
                         color: var(--color-neutral-01);
@@ -202,20 +202,6 @@ export default{
                     border-radius: 4px;
                     cursor:pointer;
                 }
-            }
-            .card{
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr 1fr;
-                grid-auto-rows: 320px;
-                gap: 10px;
-                @include respond-to("<=m") {
-                    grid-template-columns: 1fr 1fr;
-
-                    @include respond-to("<=s"){
-                        grid-template-columns: 1fr;
-                    }
-                }
-
             }
         }
     }

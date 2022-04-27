@@ -148,21 +148,6 @@ export default{
                 font-size: 34px;
             }
         }
-
-        &__items{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-auto-rows: 320px;
-            gap: 10px;
-            @include respond-to("<=m") {
-                grid-template-columns: 1fr 1fr;
-
-                @include respond-to("<=s"){
-                    grid-template-columns: 1fr;
-                }
-            }
-
-        }
     }
 }
 
