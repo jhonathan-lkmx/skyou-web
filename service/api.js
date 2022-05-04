@@ -18,10 +18,10 @@ const api = {
         },
         getMe: async () => {
             try {
-                let result = (await client.secure.get(`/auth/me`)).data;
+                let result = (await client.secure.get(`/central-api/auth/me`)).data;
                 return result;
             } catch( error ) {
-                //localStorage.removeItem( TOKEN_KEY);
+                localStorage.removeItem( TOKEN_KEY);
                 throw 'NOT_LOADED';
             }
         },
