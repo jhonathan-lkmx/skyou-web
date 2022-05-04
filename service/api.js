@@ -32,7 +32,7 @@ const api = {
         
         isLogged: async () => {
             try {
-                ( await client.secure.get('/auth/me') ).data;
+                ( await client.secure.get('/central-api/auth/me') ).data;
                 return true;
             } catch ( error ) {
                 return false;
