@@ -179,7 +179,7 @@ export default{
                     &__textProduct{
                         font-family: var(--f-default-text-font);
                         font-style: normal;
-                        font-weight: bold;
+                        font-weight: 400;
                         font-size: 1rem;
                         text-decoration: none;
                         color: var(--color-neutral-01);
@@ -269,11 +269,12 @@ export default{
                 font-size: 34px;
             }
 
-            .detailsProduc{
+            .detailsProduc {
                 width: 100%;
                 &__details{
                     font-family: var(--f-default-headers-font);
                     font-size: 16px;
+                    font-weight: 700;
                 }
                 &__textDetails{
                     font-family: Roboto;

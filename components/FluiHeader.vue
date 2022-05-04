@@ -27,13 +27,21 @@
       <flui-header-nav></flui-header-nav>
     </nav>
 
-    <button @click="showLoginModal" class="buttonLogin" aria-label="actions" v-if="!showSignOff">
-      Login
-    </button>
+    <div class="headerSession">
 
-    <button @click="signOff" class="buttonLogout" aria-label="actions" v-if="showSignOff">
-      Logout
-    </button>
+      <div class="hello-user" v-if="showSignOff">
+        Hello, <span v-if="username">{{username}}</span>
+      </div>
+
+      <button @click="signOff" class="buttonLogout" aria-label="actions" v-if="showSignOff">
+        Logout
+      </button>
+
+      <button @click="showLoginModal" class="buttonLogin" aria-label="actions" v-if="!showSignOff">
+        Login
+      </button>
+
+    </div>
 
     <transition name="fade">
       <div class="modal-overlay" v-if="showModal"></div>
@@ -97,7 +105,8 @@ export default {
       },
       showPassword:false,
       showSignOff: false,
-      showTextError: false
+      showTextError: false,
+      username: null
     }
   },
   props: {
@@ -185,9 +194,19 @@ export default {
       this.$root.$emit('session-updated');
     },
     async loadSession() {
-      let isLogged = await api.auth.isLogged();
-      this.showSignOff = isLogged;
+      try {
+        let isLogged = await api.auth.isLogged();
+        let me = await api.auth.getMe();
+        
+        this.showSignOff = isLogged;
+        this.username = me.first_name;
+
+      } catch (error) {
+        this.showSignOff = false;
+        this.username = null;
+      }
       this.$root.$emit('session-updated');
+      
       
     }
   },
@@ -349,42 +368,52 @@ export default {
     }
   }
 
-  .buttonLogin,
-  .buttonLogout {
-    cursor: pointer;
-    background-color: white;
-    border: 1px solid var(--color-primary-fashion-fuchsia);
-    color: var(--color-neutral-01);
-    border-radius: 5px;
-    width: 150px;
-    margin-top: 10px;
-    margin-left: 30%;
+  .headerSession {
     @include respond-to('<=m'){
-      width: 100px;
-      @include respond-to('<=s'){
-        width: 75px;
-      }
+      display: none;
     }
-    
-    &:hover { 
-      background-color: #d6d6d6;
+    @include respond-to('<=s'){
+      display: none;
     }
-  }
 
-  .buttonSignIn{
-    background-color: var(--color-primary-fashion-fuchsia);
-    color: white;
-    border-radius: 5px;
-    width: 150px;
-    margin-top: 10px;
-    margin-right: 20px;
-    margin-left: 30%;
-    @include respond-to('<=m'){
-      margin-left: 35%;
-      @include respond-to('<=s'){
-        margin-left: 40%;
+    .hello-user {
+      display: inline-block;
+      margin-left: 1rem;
+      span {
+        color: var(--color-primary-fashion-fuchsia);;
       }
     }
+
+    .buttonLogin,
+    .buttonLogout {
+      cursor: pointer;
+      background-color: white;
+      border: 1px solid var(--color-primary-fashion-fuchsia);
+      color: var(--color-neutral-01);
+      border-radius: 5px;
+      margin-top: 10px;
+      margin-left: 1rem;
+      
+      &:hover { 
+        background-color: #d6d6d6;
+      }
+    }
+
+    .buttonSignIn{
+      background-color: var(--color-primary-fashion-fuchsia);
+      color: white;
+      border-radius: 5px;
+      margin-top: 10px;
+      margin-right: 20px;
+      margin-left: 30%;
+      @include respond-to('<=m'){
+        margin-left: 35%;
+        @include respond-to('<=s'){
+          margin-left: 40%;
+        }
+      }
+    }
+
   }
 
   .modal-overlay{

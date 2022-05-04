@@ -17,23 +17,26 @@ const api = {
             return result.token;
         },
         getMe: async () => {
-            let result = (await client.secure.get(`/auth/me`)).data;
-            return result;
+            try {
+                let result = (await client.secure.get(`/auth/me`)).data;
+                return result;
+            } catch( error ) {
+                //localStorage.removeItem( TOKEN_KEY);
+                throw 'NOT_LOADED';
+            }
         },
         logout: async() => {
             localStorage.removeItem( TOKEN_KEY);
-            await client.post(`/auth/logout`, {});
+            await client.post('/auth/logout', {});
         },
         
         isLogged: async () => {
-            let token = localStorage.getItem(TOKEN_KEY);
-            return token != null;
-            // try {
-            //     //(await axiosInstance.get(`${apiHost}/auth/me`, getAuthConfig())).data;
-            //     return true;
-            // } catch ( error ) {
-            //     return false;
-            // }
+            try {
+                ( await client.secure.get('/auth/me') ).data;
+                return true;
+            } catch ( error ) {
+                return false;
+            }
         }
     },
     products: {

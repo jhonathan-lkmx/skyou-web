@@ -33,9 +33,9 @@ export default {
 @import "@lkmx/flare/src/functions/_respond-to.scss";
 
 .list{
-   display: grid;
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-auto-rows: 320px;
+  grid-auto-rows: 325px;
   gap: 32px;
   @include respond-to("<=m") {
     grid-template-columns: 1fr 1fr;
@@ -49,7 +49,7 @@ export default {
 
 
 
-  &__product{
+  &__product {
     &__link {
       text-decoration: none;
     }

@@ -33,22 +33,23 @@ export default {
 .list{
 
   display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-auto-rows: 320px;
-    gap: 32px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 325px;
+  gap: 32px;
 
     
-    @include respond-to("<=m") {
-        grid-template-columns: 1fr 1fr;
+  @include respond-to("<=m") {
+    grid-template-columns: 1fr 1fr;
 
-        @include respond-to("<=s"){
-            grid-template-columns: 1fr 1fr;
-        }
+    @include respond-to("<=s") {
+      grid-template-columns: 1fr 1fr;
     }
+  }
 
 
   &__product{
     margin-bottom: 20px;
+
     
     &__link {
       text-decoration: none;
@@ -61,8 +62,10 @@ export default {
 
         .img{
           width: 100%;
+          max-width: 250px;
           height: unset;
           object-fit: cover;
+          display: inline-block;
           
           &:after {
             content: "";
