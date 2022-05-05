@@ -84,6 +84,7 @@ export default{
     height: auto;
     display: inline;
     padding-bottom: 120px;
+    background-color: white;
 
     &__header{
         width: 100%;

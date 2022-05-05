@@ -138,6 +138,7 @@ export default{
 .products{ 
     height: auto;
     display: inline;
+    background-color: white;
 
     &__header{
         width: 100%;

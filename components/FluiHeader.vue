@@ -387,13 +387,14 @@ export default {
     .buttonLogin,
     .buttonLogout {
       cursor: pointer;
-      background-color: white;
-      border: 1px solid var(--color-primary-fashion-fuchsia);
+      background-color: var(--color-neutral-09);
+      border: 1px solid var(--color-primary-fashion-fuchsia); 
       color: var(--color-neutral-01);
       border-radius: 5px;
       margin-top: 10px;
       margin-left: 1rem;
-      
+      padding: 0.5rem 1rem;
+
       &:hover { 
         background-color: #d6d6d6;
       }
