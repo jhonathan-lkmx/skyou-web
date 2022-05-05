@@ -88,7 +88,7 @@ export default{
 
     &__header{
         width: 100%;
-        height: 120px;
+        height: 136px;
         display: flex;
         justify-content: center;
         padding-top: 20px;
@@ -147,6 +147,7 @@ export default{
 
             h1 {
                 margin-top: 1.5rem;
+                margin-bottom: 20px;
                 font-size: 44px;
                 font-weight: 700;
             }

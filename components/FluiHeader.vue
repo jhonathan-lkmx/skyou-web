@@ -547,7 +547,9 @@ export default {
         background-color: var(--blue-light);
         color: white;
         cursor: pointer;
-        margin-top: 5px;
+        width: 100%;
+        height: 50px;
+        margin-bottom: 0;
       }
     }
   }
