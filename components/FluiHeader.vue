@@ -243,7 +243,7 @@ export default {
 
 .flui-header {
   display: grid;
-  grid-template-columns: 240px 1fr 240px;
+  grid-template-columns: 240px 1fr 260px;
   @include respond-to('<=l') {
     grid-template-columns: 1fr auto 1fr;
   }
@@ -369,6 +369,8 @@ export default {
   }
 
   .headerSession {
+    text-align: right;
+    padding-right: 0.75rem;
     @include respond-to('<=m'){
       display: none;
     }

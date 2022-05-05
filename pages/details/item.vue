@@ -145,7 +145,8 @@ export default{
         height: 75px;
         display: flex;
         justify-content: center;
-        margin-top: 20px;
+        padding-top: 20px;
+        background-color: var(--color-neutral-09);
 
         &__title{
             width: 60%;
@@ -208,6 +209,8 @@ export default{
     &__controlImg{
         width: 100%;
         height: 753px;
+        margin-top: 1rem;
+
         @include respond-to('<=m'){
             height: 620px;
 

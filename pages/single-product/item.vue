@@ -91,7 +91,8 @@ export default{
         height: 120px;
         display: flex;
         justify-content: center;
-        margin-top: 20px;
+        padding-top: 20px;
+        background-color: var(--color-neutral-09);
 
         &__title{
             width: 60%;
