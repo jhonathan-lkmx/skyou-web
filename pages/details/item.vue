@@ -211,39 +211,26 @@ export default{
         margin-top: 1rem;
         text-align: center;
 
-        height: 753px;
-        @include respond-to('<=m'){
-            height: 620px;
-
-            @include respond-to('<=s'){
-                height: 500px;
-            }
-        }
-
-
         &__img{
             display: inline-block;
             text-align: center;
             overflow: hidden;
             background-color:  var(--color-neutral-09);
 
-            height: 721px;
+            max-height: 100%;
             @include respond-to('<=m'){
-                height: 600px;
 
                 @include respond-to('<=s'){
                     width: 100%;
                     max-width: 420px;
-                    max-height: 100%;
                 }
             }
             
             
-            
-
             #product3DPreview {
-                background-color: pink;
+                max-width: 640px;
                 display: inline-block;
+                
                 @include respond-to('<=s'){
                     width: 100%;
                 }
