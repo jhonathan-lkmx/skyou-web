@@ -103,7 +103,7 @@ export default{
             this.statusMessage = !this.statusMessage
         },
         async checkSession() {
-            this.isLogged = await api.auth.isLogged();
+            this.isLogged = true;//await api.auth.isLogged();
         }
     }
 }
@@ -404,12 +404,10 @@ export default{
             }
 
             .message{
-                height: 35px;
-                margin-top: 10px;
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap; 
-                align-content: center;
+                padding-top: 10px;
+                text-align: center;
+                background-color: var(--color-neutral-09);
+
                 &__hideMessage, &__showMessage{
                     color: var(--color-primary-fashion-fuchsia);
                     font-family: Roboto;
@@ -418,9 +416,10 @@ export default{
                     font-size: 16px;
                     line-height: 18px;
                     cursor: pointer;
+                    padding-bottom: 1.5rem;
                 }
                 &__showMessage{
-                    margin-top: 2.5rem;
+                    padding-top: 1rem;
                 }
             }
             
