@@ -8,12 +8,12 @@
                             <path d="M5.33325 4.27618L6.27606 3.33337L10.9901 8.04742L6.27606 12.7615L5.33325 11.8187L9.10449 8.04742L5.33325 4.27618Z" fill="#5E7187"/>
                         </svg>
                     </a>
-                    <a :href="`/single-product/item?id=${listDetails.productCategoryId}`" class="router__breadCrumb"> {{listDetails.productCategory}}
+                    <a :href="`/single-product/item?id=${listDetails.productCategoryId}`" class="router__breadCrumb" v-if="listDetails"> {{listDetails.productCategory}}
                         <svg class="flui-breadcrumb__link__chevron" width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5.33325 4.27618L6.27606 3.33337L10.9901 8.04742L6.27606 12.7615L5.33325 11.8187L9.10449 8.04742L5.33325 4.27618Z" fill="#5E7187"/>
                         </svg>
                     </a>
-                    <a class="router__breadCrumb__textProduct"> {{listDetails.productName}} </a>
+                    <a class="router__breadCrumb__textProduct" v-if="listDetails"> {{listDetails.productName}} </a>
                 </div>
             </div>
         </div>
@@ -142,7 +142,7 @@ export default{
 
     &__header{
         width: 100%;
-        height: 75px;
+        min-height: 75px;
         display: flex;
         justify-content: center;
         padding-top: 20px;
@@ -218,10 +218,7 @@ export default{
                 height: 500px;
             }
         }
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap; 
-        align-content: center;
+
 
         &__img{
             position: relative;
@@ -233,12 +230,18 @@ export default{
                 height: 600px;
 
                 @include respond-to('<=s'){
-                    width: 80%;
+                    width: 100%;
                     height: 481px;
                 }
             }
             height: 721px;
             background-color:  var(--color-neutral-09);
+
+            #product3DPreview {
+                @include respond-to('<=s'){
+                    width: 100%;
+                }
+            }
         }
     }
 

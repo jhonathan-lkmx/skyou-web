@@ -110,15 +110,6 @@ export default{
                         font-size: 44px;
                         text-decoration: none;
                         color: var(--color-neutral-01);
-                        @include respond-to('<=m'){
-                            font-size: 25px;
-                            font-size: 300;
-
-                            @include respond-to('<=s'){
-                                font-size: 20px;
-                                font-weight: 200;
-                            }
-                        }
                     }
                 }
 

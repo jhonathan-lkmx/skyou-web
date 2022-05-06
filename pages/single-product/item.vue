@@ -177,6 +177,13 @@ export default{
                     color: var(--color-primary-fashion-fuchsia);
                     margin-top: 4rem;
                     margin-bottom: 1rem;
+                    @include respond-to('<=m'){
+                        margin-top: 2rem;
+                        @include respond-to('<=s'){
+                            margin-top: 1rem;
+                        }
+                    }
+                    
                 }
             }
 

@@ -40,9 +40,13 @@ export default {
     
   @include respond-to("<=m") {
     grid-template-columns: 1fr 1fr;
+    row-gap: 16px;
 
     @include respond-to("<=s") {
       grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      grid-auto-rows: 300px;
+      row-gap: 0;
     }
   }
 
@@ -90,6 +94,9 @@ export default {
           line-height: 31.2px;
           color: var(--color-neutral-01);
           margin-top: 10px;
+          @include respond-to("<=s") {
+            font-size: 18px;
+          }
         }
     }
     }
