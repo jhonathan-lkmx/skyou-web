@@ -88,7 +88,6 @@ export default{
 
     &__header{
         width: 100%;
-        height: 136px;
         display: flex;
         justify-content: center;
         padding-top: 20px;
@@ -107,6 +106,7 @@ export default{
 
             .router {
                 margin-bottom: 20px;
+                line-height: 2rem;
 
                 &__breadCrumb{
                     font-size: 1rem;
