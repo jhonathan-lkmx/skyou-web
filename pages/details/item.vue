@@ -103,7 +103,7 @@ export default{
             this.statusMessage = !this.statusMessage
         },
         async checkSession() {
-            this.isLogged = true;//await api.auth.isLogged();
+            this.isLogged = await api.auth.isLogged();
         }
     }
 }
