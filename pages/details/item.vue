@@ -230,7 +230,7 @@ export default{
             #product3DPreview {
                 max-width: 640px;
                 display: inline-block;
-                
+
                 @include respond-to('<=s'){
                     width: 100%;
                 }
@@ -298,7 +298,8 @@ export default{
             grid-column: 3 / 4;
             height: 100%;
             text-align: left;
-            background-color: var(--color-neutral-09);
+            min-width: 230px;
+            
             @include respond-to('<=m'){
                 grid-column: 2 / 3;
                 grid-row: 2 / 3;
@@ -311,11 +312,11 @@ export default{
 
             .cost{
                 height: 70px;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-end;
                 box-shadow: inset 0px -3px 0px #E3E6E8;
                 width: 100%;
+                
+                background-color: var(--color-neutral-09);
+
                 &__msrp{
                     width: 100%;
                     height: 40px;
@@ -367,6 +368,8 @@ export default{
             .listCost{
                 display: grid;
                 grid-template-columns: 60% 40%;
+                background-color: var(--color-neutral-09);
+                padding-top: 0.5rem;
 
                 &__units{
                     text-align: left;
