@@ -208,9 +208,10 @@ export default{
 
     &__controlImg{
         width: 100%;
-        height: 753px;
         margin-top: 1rem;
+        text-align: center;
 
+        height: 753px;
         @include respond-to('<=m'){
             height: 620px;
 
@@ -221,23 +222,28 @@ export default{
 
 
         &__img{
-            position: relative;
+            display: inline-block;
             text-align: center;
             overflow: hidden;
-            width: 60%;
+            background-color:  var(--color-neutral-09);
+
+            height: 721px;
             @include respond-to('<=m'){
-                width: 70%;
                 height: 600px;
 
                 @include respond-to('<=s'){
                     width: 100%;
-                    height: 481px;
+                    max-width: 420px;
+                    max-height: 100%;
                 }
             }
-            height: 721px;
-            background-color:  var(--color-neutral-09);
+            
+            
+            
 
             #product3DPreview {
+                background-color: pink;
+                display: inline-block;
                 @include respond-to('<=s'){
                     width: 100%;
                 }
