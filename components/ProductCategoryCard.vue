@@ -94,6 +94,7 @@ export default {
           line-height: 31.2px;
           color: var(--color-neutral-01);
           margin-top: 10px;
+          text-align: center;
           @include respond-to("<=s") {
             font-size: 18px;
           }

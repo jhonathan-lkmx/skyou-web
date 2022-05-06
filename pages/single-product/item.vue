@@ -205,6 +205,9 @@ export default{
                 }
                 img {
                     display: inline-block;
+                    @include respond-to('<=s'){
+                            width: 100%;
+                    }
                 }
                 button {
                     background-color: var(--color-primary-fashion-fuchsia);
