@@ -39,28 +39,28 @@
                         <h1 class="cost__msrp__text">MSRP </h1>
                         <h1 class="cost__msrp__textCost" v-if="listDetails.priceType">{{listDetails.priceType.msrpPrice | currency}}</h1>
                     </div>
-                    <div class="cost__yourCost" v-if="false">
-                        <h1 class="cost__yourCost__text">your cost  </h1>
-                        <h1 class="cost__yourCost__textCost" v-if="listDetails.priceType">{{listDetails.priceType.marketPrice | currency }}</h1> 
-                    </div>
                 </div>
-                <div class="listCost" v-show="statusMessage && isLogged">
+                <div class="listCost" v-show="statusMessage" v-if="listDetails.priceTiers">
                     <div class="listCost__units">
                         <p class="textUnits">Units</p>
-                        <p v-for="(cost, index) in listDetails.priceTiers" :key="index" class="listCost__units__unit">
+                        <p v-for="(cost, index) in listDetails.priceTiers.slice(0, priceLimits)" :key="index" class="listCost__units__unit">
                             {{cost.unit}} 
                             <span v-if="index==0">/ Shopify MOD <vue-custom-tooltip class="tooltip" :multiline="true" label="All orders processed through the Shopify app are considered MOD (manufacture on demand), and will be billed at the MOD price.  To receive bulk pricing please reach out to us at sales@skyou.com.  In order to qualify for bulk pricing you must order the same product and the same design e.g. 10 t-shirts with the same bunny design (you can order any variation of sizes).">?</vue-custom-tooltip></span>
                         </p>
                     </div>
                     <div class="listCost__mrsp">
                         <p class="textMrsp">Cost</p>
-                        <p v-for="(cost, index) in listDetails.priceTiers" :key="index" class="listCost__mrsp__price"> {{cost.price | currency}} </p>
+                        <p v-for="(cost, index) in listDetails.priceTiers.slice(0, priceLimits)" :key="index" class="listCost__mrsp__price"> {{cost.price | currency}} </p>
                     </div>
                 </div>
-                <div class="message" v-show="isLogged">
+                <div class="message" v-if="isLogged">
                     <p class="message__showMessage" @click.prevent="statusMessages" v-show="!statusMessage">Show bulk prices</p>
                     <p class="message__hideMessage" @click.prevent="statusMessages" v-show="statusMessage">Hide bulk prices</p>
                 </div>
+                <div class="login-message" v-else>
+                    Log in for bulk pricing.
+                </div>
+                
             </div>
         </div>
     </div>
@@ -78,6 +78,11 @@ export default{
             statusMessage:true,
             isLogged: false,
             modelAvailable: true
+        }
+    },
+    computed: {
+        priceLimits() {
+            return this.isLogged ? 100 : 1;
         }
     },
     async mounted() {
@@ -403,7 +408,8 @@ export default{
                 }
             }
 
-            .message{
+            .login-message,
+            .message {
                 padding-top: 10px;
                 text-align: center;
                 background-color: var(--color-neutral-09);
@@ -421,6 +427,12 @@ export default{
                 &__showMessage{
                     padding-top: 1rem;
                 }
+            }
+
+            .login-message {
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                color: var(--color-primary-fashion-fuchsia);
             }
             
         }
