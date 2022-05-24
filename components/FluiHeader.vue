@@ -225,6 +225,7 @@ export default {
   },
   mounted () {
     this.loadSession();
+    this.$root.$on('session-login-open', this.showLoginModal);
   },
 };
 </script>

@@ -58,7 +58,7 @@
                     <p class="message__hideMessage" @click.prevent="statusMessages" v-show="statusMessage">Hide bulk prices</p>
                 </div>
                 <div class="login-message" v-else>
-                    Log in for bulk pricing.
+                    <a @click="openLogin">Log in for bulk pricing.</a>
                 </div>
                 
             </div>
@@ -109,6 +109,10 @@ export default{
         },
         async checkSession() {
             this.isLogged = await api.auth.isLogged();
+        },
+        openLogin() {
+            console.log('LOGIN');
+            this.$root.$emit('session-login-open');
         }
     }
 }
@@ -429,7 +433,8 @@ export default{
                 }
             }
 
-            .login-message {
+            .login-message a {
+                cursor: pointer;
                 padding-top: 1rem;
                 padding-bottom: 1rem;
                 color: var(--color-primary-fashion-fuchsia);
