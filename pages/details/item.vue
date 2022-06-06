@@ -27,7 +27,7 @@
         <div class="products__details">
             <div class="products__details__container1">
                 <h1 class="titleName"> {{listDetails.productName}} </h1>
-                <h3 class="titleCode"> {{listDetails.productCode}}} </h3>
+                <h3 class="titleCode"> {{listDetails.productCode}} </h3>
                 <div class="detailsProduc">
                     <label class="detailsProduc__details"> Details </label>
                     <p class="detailsProduc__textDetails" v-html="listDetails.productDescription"></p>
