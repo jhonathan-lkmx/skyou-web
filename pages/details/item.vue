@@ -111,7 +111,6 @@ export default{
             this.isLogged = await api.auth.isLogged();
         },
         openLogin() {
-            console.log('LOGIN');
             this.$root.$emit('session-login-open');
         }
     }
@@ -433,11 +432,18 @@ export default{
                 }
             }
 
+
+            .login-message {
+                padding-top: 1rem;
+                padding-bottom: 27px;
+            }
+
             .login-message a {
                 cursor: pointer;
                 padding-top: 1rem;
                 padding-bottom: 1rem;
                 color: var(--color-primary-fashion-fuchsia);
+                font-weight: 400;
             }
             
         }
