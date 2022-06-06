@@ -27,6 +27,7 @@
         <div class="products__details">
             <div class="products__details__container1">
                 <h1 class="titleName"> {{listDetails.productName}} </h1>
+                <h3 class="titleCode"> {{listDetails.productCode}}} </h3>
                 <div class="detailsProduc">
                     <label class="detailsProduc__details"> Details </label>
                     <p class="detailsProduc__textDetails" v-html="listDetails.productDescription"></p>
@@ -273,8 +274,15 @@ export default{
                     grid-row: 1 / 2;      
                 }
             }
-            .titleName{
+            .titleName {
                 font-size: 34px;
+                margin-bottom: 8px;
+            }
+            .titleCode {
+                font-weight: 400;
+                color: var(--color-primary-fashion-fuchsia);
+                font-size: 16px;
+                margin-bottom: 2rem;
             }
 
             .detailsProduc {
