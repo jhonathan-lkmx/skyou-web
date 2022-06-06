@@ -17,7 +17,7 @@
                 </div>
             </div>
         </div>
-        <div class="products__controlImg" v-show="modelAvailable">
+        <div class="products__controlImg" v-if="modelAvailable">
             <div class="products__controlImg__img">
 
             <canvas id="product3DPreview" width="720px" height="720px"></canvas>
@@ -77,7 +77,7 @@ export default{
             listDetails: '',
             statusMessage:true,
             isLogged: false,
-            modelAvailable: false
+            modelAvailable: true
         }
     },
     computed: {
@@ -102,10 +102,7 @@ export default{
             skyou_render_product_thumb(
                     document.getElementById('product3DPreview'),
                     this.$config.product3dTool,
-                    code,
-                    () => {
-                        this.modelAvailable = true;
-                    });
+                    code );
         },
         statusMessages(){
             this.statusMessage = !this.statusMessage
