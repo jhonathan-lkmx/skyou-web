@@ -190,7 +190,7 @@ export default {
     },
     async signOff() {
       this.showSignOff = !this.showSignOff
-      api.auth.logout();
+      await api.auth.logout();
       this.$root.$emit('session-updated');
     },
     async loadSession() {
