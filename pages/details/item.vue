@@ -91,6 +91,7 @@ export default{
         this.getCategoryId()
         this.checkSession();
         this.$root.$on('session-updated', this.checkSession);
+        this.$root.$on('session-updated-logout', this.checkSessionLogout);
     },
     methods:{
         async getCategoryId(){
@@ -110,6 +111,10 @@ export default{
         },
         async checkSession() {
             this.isLogged = await api.auth.isLogged();
+        },
+        async checkSessionLogout() {
+            this.isLogged = false;
+            await api.auth.isLogged();
         },
         openLogin() {
             this.$root.$emit('session-login-open');
