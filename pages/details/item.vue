@@ -114,6 +114,7 @@ export default{
         },
         async checkSessionLogout() {
             this.isLogged = false;
+            this.statusMessage = true;
             await api.auth.isLogged();
         },
         openLogin() {
